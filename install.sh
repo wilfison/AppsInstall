@@ -11,19 +11,12 @@ echo -e "\033[0;34m ========================================================== \
 
 \033[0;34m 
     1 - Ruby on Rails com RVM    |   \033[0;31m 0 - Sair \033[0m
-
 \033[0;34m    2 - Git                      |   
-
     3 - Virtualbox               |
-
     4 - VLC player               |
-
     5 - LAMP + PhpMyAdmin        |
-
     6 - Sublime Text 3           |
-
     7 - Google Chrome            |
-    
     8 - Telegram                 |
         
  =========================================================== \033[0m
