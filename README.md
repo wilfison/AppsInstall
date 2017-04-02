@@ -6,11 +6,10 @@
 <body>
 	<div>
 		<h1>AppsInstall</h1>
-		<hr/>
 		<h3>Shell Script file for install some softwares in Ubuntu</h3>
 		<h4>Change Log</h4>
+		<hr/>
 		<div>
-			<h5>Change Log</h5>
 			<ul>
 				<li>Ruby On Rails with MVR</li>
 				<li>Git</li>
