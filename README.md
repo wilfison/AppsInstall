@@ -24,8 +24,15 @@
 		<br/>
 		<div>
 			<h3>Install</h3>
-			<p></p>
-			<p>Rum install.x in terminal or $ sudo bash install.sh</p>
+			<div>
+				<ol>
+					<li>Rum install.x in terminal</li>
+					<p>or</p>
+					<li>$ sudo bash install.sh</li>
+					<li>Choose the number of the program you want to install and press enter</li>
+					<li>Wait for the end of the process and the message that the program has successfully installed</li>
+				</ol>
+			</div>
 		</div>
 	</div>
 </body>
