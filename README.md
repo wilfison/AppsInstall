@@ -7,7 +7,6 @@
 	<div>
 		<h1>AppsInstall</h1>
 		<h3>Shell Script file for install some softwares in Ubuntu</h3>
-		<h4>Change Log</h4>
 		<hr/>
 		<div>
 			<ul>
@@ -20,6 +19,13 @@
 				<li>Google Chrome</li>
 				<li>Telegram </li>
 			</ul>
+		</div>
+		<br/>
+		<br/>
+		<div>
+			<h3>Install</h3>
+			<p></p>
+			<p>Rum install.x in terminal or $ sudo bash install.sh</p>
 		</div>
 	</div>
 </body>
