@@ -13,8 +13,8 @@
 				<li>Ruby On Rails with MVR</li>
 				<li>Git</li>
 				<li>Virtualbox</li>
-				<li>VLC player</li>
-				<li>LAMP + PhpMyAdmin</li>
+				<li>VLC Media Player</li>
+				<li>LAMP Server + PhpMyAdmin</li>
 				<li>Sublime Text 3</li>
 				<li>Google Chrome</li>
 				<li>Telegram </li>
@@ -26,9 +26,7 @@
 			<h3>Install</h3>
 			<div>
 				<ol>
-					<li>Rum install.x in terminal</li>
-					<p>or</p>
-					<li>$ sudo bash install.sh</li>
+					<li>Run install.x in terminal   or    $ sudo bash install.sh</li>
 					<li>Choose the number of the program you want to install and press enter</li>
 					<li>Wait for the end of the process and the message that the program has successfully installed</li>
 				</ol>
