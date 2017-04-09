@@ -40,7 +40,11 @@ This Shell Script you can install:
 		<li>Download the files clicking <a href="https://github.com/Wilfison/AppsInstall/archive/master.zip">here</a></li>
 		<li>Unzip the zip file</li>
 		<li>Open a terminal in the uncompressed folder</li>
-		<li>Run $ sudo bash install.sh</li>
+		<li>Run 
+			<pre>
+				<code>$ sudo bash install.sh</code>
+			</pre>
+		</li>
 		<li>Choose the number of the program you want to install and press enter</li>
 		<li>Wait for the end of the process and the message that the program has successfully installed</li>
 	</ol>
