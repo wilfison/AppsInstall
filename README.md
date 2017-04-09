@@ -34,9 +34,7 @@ This Shell Script you can install:
 
 
 ## Install
-- Navigate to the file folder
-...
-- Rum $ sudo bash install.sh
-...
-- Choose the number of the program you want to install and press enter
-- Wait for the end of the process and the message that the program has successfully installed
+1 - Navigate to the file folder
+2 - Rum $ sudo bash install.sh
+3 - Choose the number of the program you want to install and press enter
+4 - Wait for the end of the process and the message that the program has successfully installed
