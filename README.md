@@ -34,7 +34,14 @@ This Shell Script you can install:
 
 
 ## Install
-1 - Navigate to the file folder
-2 - Rum $ sudo bash install.sh
-3 - Choose the number of the program you want to install and press enter
-4 - Wait for the end of the process and the message that the program has successfully installed
+
+<div>
+	<ol>
+		<li>Download the files clicking <a href="https://github.com/Wilfison/AppsInstall/archive/master.zip">here</a></li>
+		<li>Unzip the zip file</li>
+		<li>Open a terminal in the uncompressed folder</li>
+		<li>Run $ sudo bash install.sh</li>
+		<li>Choose the number of the program you want to install and press enter</li>
+		<li>Wait for the end of the process and the message that the program has successfully installed</li>
+	</ol>
+</div>
