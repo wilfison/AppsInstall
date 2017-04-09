@@ -3,20 +3,34 @@
 
 This Shell Script you can install:
 
- 1 - Ruby on Rails with RVM   |    15 - Nautilus Open Terminal
- 2 - Git                      |    16 - Grub Customizer
- 3 - Virtualbox               |    17 - Plank (Docky)
- 4 - VLC player               |    18 - Whatsie (Whatsapp Unofficial)
- 5 - LAMP + PhpMyAdmin        |    19 - Open Jdk 8
- 6 - Sublime Text 3           |    20 - SMPlayer
- 7 - Google Chrome            |    21 - Qbittorrent
- 8 - Telegram                 |    22 - Inkscape
- 9 - Libre Office             |    23 - Adobe Flash Plugin
-10 - Ubuntu Restricted Extras |    24 - Wine
-11 - ZIP, RAR, 7-ZIP, etc.    |    25 - Playonlinux
-12 - Unity Tweak Tool         |    26 - Spotify
-13 - Gtk Theme config         |    27 - Gimp
-14 - Bleachbit                |    28 - WPS Office
+- Ruby on Rails with RVM 
+- Nautilus Open Terminal
+- Git                    
+- Grub Customizer
+- Virtualbox              
+- Plank (Docky)
+- VLC player               
+- Whatsie (Whatsapp Unofficial)
+- LAMP + PhpMyAdmin        
+- Open Jdk 8
+- Sublime Text 3         
+- SMPlayer
+- Google Chrome            
+- Qbittorrent
+- Telegram                
+- Inkscape
+- Libre Office           
+- Adobe Flash Plugin
+- Ubuntu Restricted Extras 
+- Wine
+- ZIP, RAR, 7-ZIP, etc.   
+- Playonlinux
+- Unity Tweak Tool        
+- Spotify
+- Gtk Theme config        
+- Gimp
+- Bleachbit               
+- WPS Office
 
 
 ## Install
