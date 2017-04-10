@@ -17,10 +17,12 @@ echo -e "\033[0;34m
 
       2 - Instalar no PC ( Meu idioma é Português)
       3 - Instalar no PC ( Meu idioma é Inglês)
+     00 - Estou usando Debian
 
-  
-\033[0;32m  Obs: se você Instalar poderá encontrar o app no seu
-       menu de aplicativos e não precisará digitar nada. \033[0m
+\033[0;32m  Se você está usando o Debian use a opção 00 para configurar sua máquina. \033[0m 
+
+\033[0;32m  Obs: se você Instalar o App no PC poderá encontra-lo no seu
+       menu de aplicativos. \033[0m
 
 \033[0;34m
  ==================================================================  \033[0m
@@ -60,6 +62,11 @@ case $opcao in
         ln -s ~/.local/share/applications/AppInstall.desktop ~/Desktop
         clear
         echo -e "\033[0;31m Agora procure por App Install no seu menu de Aplicativos nós também adicionamos um atalho no seu desktop \033[0m";;
+    00)
+        sudo chmod +x add-apt-repository.sh &&
+        sudo mkdir /usr/sbin/add-apt-repository &&
+        sudo cp add-apt-repository.sh /usr/sbin/add-apt-repository &&
+        echo -e "\033[0;31m Seu Debian foi configurado com sucesso! Agora Já pode instalar o App en sua máquina. \033[0m";;   
     0)
         echo -e "\033[0;31m Saindo... \033[0m"
         exit;;

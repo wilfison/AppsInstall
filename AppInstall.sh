@@ -31,7 +31,8 @@ echo -e "\033[0;34m
  ==================================================================  \033[0m
 
 "
-
+echo -e "\033[0;31m Digite 00 se estiver usando o Debian: \033[0m
+"
 echo -e "\033[0;34m Digite o número do componente a ser instalado: \033[0m
 "
 echo -n -e "\033[0;34m ->OPÇÃO:\033[0m "
@@ -137,8 +138,6 @@ case $opcao in
         sudo apt install grub-customizer -y &&
         echo -e "\033[0;32m Grub Customizer instalado com sucesso \033[0m";;
     17)
-        sudo add-apt-repository ppa:docky-core/stable -y &&
-        sudo apt update &&
         sudo apt install plank -y &&
         echo -e "\033[0;32m Plank instalado com sucesso \033[0m";;
     18)
