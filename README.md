@@ -42,6 +42,7 @@ Com essa aplicação você poderá instalar:
 		<li>Execute install.sh clicando duas vezes no arquivo (caso nada aconteça, abra um terminal na pasta e digite <code>$ sudo sh install.sh</code>)</li>
 		<li>Se você apenas deseja instalar um programa digite 1</li>
 		<li>Se você deseja instalar outros apps recomendamos que use as opções 2 ou 3 e instale no seu pc, você poderá escontrar o App Install no seu menu de aplicativos. </li>
+		<li>Caso esteja usando o Debian use a opção 00 para configurar sua máquina para usar PPA's</li>
 	</ol>
 </div>
 
