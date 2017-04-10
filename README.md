@@ -1,9 +1,9 @@
 # AppsInstall
-## Shell Script file for install some softwares in Ubuntu, Debian and Based
+## Mini Aplicativo para instalar alguns softwares no Ubuntu, Debian e derivados.
 
-This Shell Script you can install:
+Com essa aplicação você poderá instalar:
 
-- Ruby on Rails with RVM 
+- Ruby on Rails com RVM 
 - Nautilus Open Terminal
 - Git                    
 - Grub Customizer
@@ -33,19 +33,25 @@ This Shell Script you can install:
 - WPS Office
 
 
-## Install
+## Instalação:
 
 <div>
 	<ol>
-		<li>Download the files clicking <a href="https://github.com/Wilfison/AppsInstall/archive/master.zip">here</a></li>
-		<li>Unzip the zip file</li>
-		<li>Open a terminal in the uncompressed folder</li>
-		<li>Run 
-			<pre>
-				<code>$ sudo bash install.sh</code>
-			</pre>
-		</li>
-		<li>Choose the number of the program you want to install and press enter</li>
-		<li>Wait for the end of the process and the message that the program has successfully installed</li>
+		<li>Faça o download do arquivo clicando <a href="https://github.com/Wilfison/AppsInstall/archive/master.zip">aqui</a></li>
+		<li>Descompacte o arquivo ZIP</li>
+		<li>Execute install.sh clicando duas vezes no arquivo (caso nada aconteça, abra um terminal na pasta e digite <code>$ sudo sh install.sh</code>)</li>
+		<li>Se você apenas deseja instalar um programa digite 1</li>
+		<li>Se você deseja instalar outros apps recomendamos que use as opções 2 ou 3 e instale no seu pc, você poderá escontrar o App Install no seu menu de aplicativos. </li>
+	</ol>
+</div>
+
+## Instalar Apps
+
+<div>
+	<ol>
+		<li>Execute AppInstall no seu menu de aplicativos ou AppInstall.sh em um terminal</li>
+		<li>Escolha qual programa deseja instalar, digite o número correspondente e precione enter</li>
+		<li>Aguarde o fim da instalação e confirmação da instalação com sucesso</li>
+		<li>Escolha outro software a ser instalado ou tecle 0 para sair</li>
 	</ol>
 </div>
