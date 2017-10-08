@@ -15,7 +15,7 @@ echo -e "\033[0;34m
      1 - Ruby on Rails com RVM    |    15 - Nautilus Open Terminal
      2 - Git                      |    16 - Grub Customizer
      3 - Virtualbox               |    17 - Plank (Docky)
-     4 - VLC player               |    18 - Whatsie (Whatsapp Unofficial)
+     4 - Node js                  |    18 - My ZSH
      5 - LAMP + PhpMyAdmin        |    19 - Open Jdk 8
      6 - Sublime Text 3           |    20 - SMPlayer
      7 - Google Chrome            |    21 - Qbittorrent
@@ -31,7 +31,7 @@ echo -e "\033[0;34m
  ==================================================================  \033[0m
 
 "
-echo -e "\033[0;31m Digite 00 se estiver usando o Debian: \033[0m
+echo -e "\033[0;31m Somente para Ubuntu e afins. \033[0m
 "
 echo -e "\033[0;34m Digite o número do componente a ser instalado: \033[0m
 "
@@ -53,7 +53,6 @@ case $opcao in
         \curl -sSL https://get.rvm.io | bash &&
         \curl -sSL https://get.rvm.io | bash -s stable --ruby &&
         \curl -sSL https://get.rvm.io | bash -s stable --rails &&
-        \curl -sSL https://get.rvm.io | bash -s stable --ruby=jruby --gems=rails,puma &&
         sudo apt install -y build-essential autoconf bison libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev libpq-dev ruby-dev -y &&
         sudo apt install postgresql postgresql-contrib libpq-dev -y &&
         sudo apt install nodejs -y &&
@@ -77,8 +76,9 @@ case $opcao in
         sudo apt install virtualbox-5.1 -y &&
         echo -e "\033[0;32m Virtualbox instalado com sucesso \033[0m";;
     4)
-        sudo apt install vlc -y &&
-        echo -e "\033[0;32m VLC instalado com sucesso \033[0m";;
+        curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - &&
+        sudo apt-get install nodejs -y &&
+        echo -e "\033[0;32m Node instalado com sucesso \033[0m";;
     5)
         sudo apt install lamp-server^ -y &&
         sudo apt install phpmyadmin -y &&
@@ -141,11 +141,9 @@ case $opcao in
         sudo apt install plank -y &&
         echo -e "\033[0;32m Plank instalado com sucesso \033[0m";;
     18)
-        sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 1537994D &&
-        echo "deb http://dl.bintray.com/aluxian/deb stable main" | sudo tee /etc/apt/sources.list.d/whatsie.list &&
-        sudo apt update &&
-        sudo apt-get install whatsie &&
-        echo -e "\033[0;32m Numix instalado com sucesso \033[0m";;
+        sudo apt install zsh -y &&
+        chsh -s `which zsh` &&
+        echo -e "\033[0;32m My ZSH instalado com sucesso \033[0m";;
     19)
         sudo add-apt-repository ppa:openjdk-r/ppa -y && 
         sudo apt update &&

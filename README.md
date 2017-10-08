@@ -9,8 +9,8 @@ Com essa aplicação você poderá instalar:
 - Grub Customizer
 - Virtualbox              
 - Plank (Docky)
-- VLC player               
-- Whatsie (Whatsapp Unofficial)
+- Nodejs               
+- My ZSH
 - LAMP + PhpMyAdmin        
 - Open Jdk 8
 - Sublime Text 3         
@@ -39,7 +39,8 @@ Com essa aplicação você poderá instalar:
 	<ol>
 		<li>Faça o download do arquivo clicando <a href="https://github.com/Wilfison/AppsInstall/archive/master.zip">aqui</a></li>
 		<li>Descompacte o arquivo ZIP</li>
-		<li>Execute install.sh clicando duas vezes no arquivo (caso nada aconteça, abra um terminal na pasta e digite <code>$ sudo sh install.sh</code>)</li>
+		<li>Execute <code>install.sh</code> clicando duas vezes no arquivo, caso nada aconteça, abra um terminal na pasta e digite:</li>
+			<code>$ sudo sh install.sh</code>
 		<li>Se você apenas deseja instalar um programa digite 1</li>
 		<li>Se você deseja instalar outros apps recomendamos que use as opções 2 ou 3 e instale no seu pc, você poderá escontrar o App Install no seu menu de aplicativos. </li>
 		<li>Caso esteja usando o Debian use a opção 00 para configurar sua máquina para usar PPA's</li>
