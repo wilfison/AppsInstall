@@ -2,7 +2,7 @@
 Name=App Install
 Comment=Instala vários programas sem que você digite códigos
 Exec=sh -c "~/.local/share/AppInstall/AppInstall.sh"
-Icon=konsole
+Icon=software-manager;kosole;
 Terminal=true
 Type=Application
 Categories=Application;Development;
