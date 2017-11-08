@@ -1,59 +1,65 @@
 # AppsInstall
-## Mini Aplicativo para instalar alguns softwares no Ubuntu, Debian e derivados.
+## Mini Aplicativo para instalar alguns softwares no Ubuntu e derivados.
 
-Com essa aplicação você poderá instalar:
-
-- Ruby on Rails com RVM 
-- Nautilus Open Terminal
-- Git                    
-- Grub Customizer
-- Virtualbox              
-- Plank (Docky)
-- Nodejs               
+- Ruby on Rails + RVM           
+- React Native
+- Git                             
+- Electron
+- Cordova + Phonegap                
+- Ionic + Cordova
+- Nodejs 8.x                      
 - My ZSH
-- LAMP + PhpMyAdmin        
+- LAMP + PhpMyAdmin               
 - Open Jdk 8
-- Sublime Text 3         
-- SMPlayer
-- Google Chrome            
+- Sublime Text 3                  
+- Java e Jdk Default --
+- Google Chrome                   
 - Qbittorrent
-- Telegram                
+- Telegram                        
 - Inkscape
-- Libre Office           
+- Libre Office                    
 - Adobe Flash Plugin
-- Ubuntu Restricted Extras 
+- Ubuntu Restricted Extras        
 - Wine
-- ZIP, RAR, 7-ZIP, etc.   
+- ZIP, RAR, 7-ZIP, etc.           
 - Playonlinux
-- Unity Tweak Tool        
+- Deepin Desktop (Ubuntu 17.04 +) 
 - Spotify
-- Gtk Theme config        
+- Kdenlive                                 
 - Gimp
-- Bleachbit               
+- Bleachbit                       
 - WPS Office
 
 
 ## Instalação:
 
-<div>
-	<ol>
-		<li>Faça o download do arquivo clicando <a href="https://github.com/Wilfison/AppsInstall/archive/master.zip">aqui</a></li>
-		<li>Descompacte o arquivo ZIP</li>
-		<li>Execute <code>install.sh</code> clicando duas vezes no arquivo, caso nada aconteça, abra um terminal na pasta e digite:</li>
-			<code>$ sudo sh install.sh</code>
-		<li>Se você apenas deseja instalar um programa digite 1</li>
-		<li>Se você deseja instalar outros apps recomendamos que use as opções 2 ou 3 e instale no seu pc, você poderá escontrar o App Install no seu menu de aplicativos. </li>
-		<li>Caso esteja usando o Debian use a opção 00 para configurar sua máquina para usar PPA's</li>
-	</ol>
-</div>
+
+1- Faça o download do arquivo clicando <a href="https://github.com/Wilfison/AppsInstall/archive/master.zip">aqui.</a>
+2- Descompacte o arquivo ZIP.
+3- Execute <code>install.sh</code> clicando duas vezes no arquivo ou abra um terminal na pasta e digite:
+
+	```bash	
+		$ sudo sh install.sh
+	```
+4- Se você apenas deseja instalar um programa digite 1.
+5- Se você deseja instalar outros apps recomendamos que use as opções 2 ou 3 e instale no seu pc, você poderá escontrar o App Install no seu menu de aplicativos.
 
 ## Instalar Apps
 
-<div>
-	<ol>
-		<li>Execute AppInstall no seu menu de aplicativos ou AppInstall.sh em um terminal</li>
-		<li>Escolha qual programa deseja instalar, digite o número correspondente e precione enter</li>
-		<li>Aguarde o fim da instalação e confirmação da instalação com sucesso</li>
-		<li>Escolha outro software a ser instalado ou tecle 0 para sair</li>
-	</ol>
-</div>
+
+1- Execute AppInstall no seu menu de aplicativos ou AppInstall.sh em um terminal ou use o comando abaixo:
+	```bash	
+		$ sh -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/AppInstall.sh -O -)"
+	```
+2- Escolha qual programa deseja instalar, digite o número correspondente e precione enter
+3- Aguarde o fim da instalação e confirmação da instalação com sucesso
+4- Escolha outro software a ser instalado ou tecle 0 para sair
+
+## ***************** Atenção *****************
+
+### Alguns programas não podem ser adicionados ao debian por usar PPA's:
+
+- Libre Office
+- Deepin Desktop 
+- Open Jdk 8
+- Wine

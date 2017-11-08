@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=App Install
-Comment=Instala vários programas sem que você digite códigos
+Comment=Instala vários programas e prepara ambientes para programação sem que você digite códigos
 Exec=sh -c "~/.local/share/AppInstall/AppInstall.sh"
-Icon=software-manager;kosole;
+Icon=~/.local/share/AppInstall/AppInstall.svg
 Terminal=true
 Type=Application
 Categories=Application;Development;
