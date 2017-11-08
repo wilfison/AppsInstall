@@ -136,6 +136,7 @@ case $opcao in
     14)
         sudo apt install bleachbit -y &&
         echo "$green Bleachbit instalado com sucesso \033[0m";;
+
     15)
         sudo apt install -y build-essential &&
         sudo apt install git &&
@@ -232,7 +233,6 @@ case $opcao in
         echo -e "\033[0;31m 
         Agora procure por App Install no seu menu de Aplicativos ou execute 'appinstall' no seu terminal \033[0m";; 
     *)
-        echo
         echo "$red ERRO: opção inválida \033[0m"
         echo ;;
 esac
