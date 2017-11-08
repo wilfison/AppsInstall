@@ -2,7 +2,7 @@
 ## Mini Aplicativo para prepar ambientes de programação e instalar alguns softwares no Ubuntu e derivados.
 
 
-![ScreenShot do App](https://raw.githubusercontent.com/Wilfison/AppsInstall/screenshot.png)
+![ScreenShot do App](https://github.com/Wilfison/AppsInstall/raw/master/screenshot.png)
 
 
 ## Instalação:
