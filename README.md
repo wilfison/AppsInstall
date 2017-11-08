@@ -49,7 +49,7 @@
 
 1- Execute AppInstall no seu menu de aplicativos ou AppInstall.sh em um terminal ou use o comando abaixo:
 	```bash	
-		$ sh -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/AppInstall.sh -O -)"
+		$ sh -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/AppInstall.sh -O -)"
 	```
 2- Escolha qual programa deseja instalar, digite o número correspondente e precione enter
 3- Aguarde o fim da instalação e confirmação da instalação com sucesso
