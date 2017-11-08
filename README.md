@@ -12,7 +12,7 @@
 - LAMP + PhpMyAdmin               
 - Open Jdk 8
 - Sublime Text 3                  
-- Java e Jdk Default --
+- Java e Jdk Default
 - Google Chrome                   
 - Qbittorrent
 - Telegram                        
@@ -55,7 +55,8 @@
 3- Aguarde o fim da instalação e confirmação da instalação com sucesso
 4- Escolha outro software a ser instalado ou tecle 0 para sair
 
-## ***************** Atenção *****************
+<h2 style="color:red;">***************** Atenção *****************</h2>
+
 
 ### Alguns programas não podem ser adicionados ao debian por usar PPA's:
 
