@@ -8,29 +8,29 @@ green="\033[0;31m"
 clear
 while true; do
 echo -e "\033[0;34m 
- =================================================================== \033[0m \033[0;31m
+ =================================================================== \033[0m $green
                          O que vamos Fazer? \033[0m
 
-\033[0;34m 
+$blue 
       
       1 - Executar agora             |    0 - Sair
       2 - Instalar no PC (Português) |
       3 - Instalar no PC (Inglês)    |
 
 \033[0m
-\033[0;32m  
+$red  
           Obs: se você Instalar o App no PC poderá encontra-lo 
                         no seu menu de aplicativos. 
 \033[0m
 
-\033[0;34m
+$blue
  =================== Criado por Wilfison Batista ===================  \033[0m
 
 "
 
-echo -e "\033[0;34m Digite um número da sua opção: \033[0m
+echo -e "$blue Digite um número da sua opção: \033[0m
 "
-echo -n -e "\033[0;34m ->OPÇÃO:\033[0m "
+echo -n -e "$blue ->OPÇÃO:\033[0m "
 
 read opcao
 

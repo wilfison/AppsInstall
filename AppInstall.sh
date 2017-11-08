@@ -33,7 +33,7 @@ $blue
     $green 14\033[0m ➜ $blue Bleachbit \033[0m                       |    $green 28\033[0m ➜ $blue WPS Office \033[0m
                     
                                $red   
-                                        0 - Sair \033[0m 
+                       00 ➜ Instalar no PC  |    0 ➜ Sair \033[0m 
 $blue 
  ================================= Criado por Wilfison Batista ========================  \033[0m
 "
@@ -217,6 +217,20 @@ case $opcao in
     0)
         echo "\033[0; Saindo... \033[0m"
         exit;;
+    00)
+        wget https://github.com/Wilfison/AppsInstall/archive/master.zip -O /tmp/AppInstall.zip &&
+        unzip /tmp/AppInstall.zip -d /tmp &&
+        rm -rf ~/.local/share/AppInstall &&
+        rm -i ~/.local/share/applications/AppInstall.desktop &&        
+        mkdir ~/.local/share/AppInstall &&
+        cp /tmp/AppsInstall-master/AppInstall.sh ~/.local/share/AppInstall &&
+        cp /tmp/AppsInstall-master/AppInstall.desktop ~/.local/share/applications &&
+        cp /tmp/AppsInstall-master/AppInstall.svg ~/.local/share/AppInstall &&
+        echo "# Adiciona o comando appinstall para encurtar o chamado do app.
+        alias appinstall='sh ~/.local/share/AppInstall/AppInstall.sh'" >> ~/.bashrc &&
+        clear &&
+        echo -e "\033[0;31m 
+        Agora procure por App Install no seu menu de Aplicativos ou execute 'appinstall' no seu terminal \033[0m";; 
     *)
         echo
         echo "$red ERRO: opção inválida \033[0m"
