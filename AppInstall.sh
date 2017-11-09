@@ -58,7 +58,8 @@ case $opcao in
         \curl -sSL https://get.rvm.io | bash -s stable --ruby &&
         \curl -sSL https://get.rvm.io | bash -s stable --rails &&
         sudo apt install postgresql postgresql-contrib libpq-dev -y &&
-        gem install bundler &&
+        sudo chown -R $(whoami) /var/lib/gems &&
+        sudo gem install bundle &&
         echo "$green Ruby On Rails instalado com sucesso \033[0m" &&
         echo "$blue Estamos prontos! Navegue até o diretório do seu projeto e execute 'bundle install' \033[0m";;
     2)
