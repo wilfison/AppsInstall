@@ -2,9 +2,8 @@
 Name=App Install
 Comment=Instala vários programas e prepara ambientes para programação sem que você digite códigos
 Exec=sh -c "~/.local/share/AppInstall/AppInstall.sh"
-Icon=~/.local/share/AppInstall/AppInstall.svg
+Icon=terminal
 Terminal=true
 Type=Application
 Categories=Application;Development;
-Name[en_US]=App Install
-Name[pt_BR]=App Install
+Name[pt_BR]=appinstall

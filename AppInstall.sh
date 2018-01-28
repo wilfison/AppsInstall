@@ -226,15 +226,11 @@ case $opcao in
         exit;;
     00)
         wget https://github.com/Wilfison/AppsInstall/archive/master.zip -O /tmp/AppInstall.zip &&
-        unzip /tmp/AppInstall.zip -d /tmp &&
-        rm -rf ~/.local/share/AppInstall &&
-        rm -i ~/.local/share/applications/AppInstall.desktop &&        
+        unzip /tmp/AppInstall.zip -d /tmp &&      
         mkdir ~/.local/share/AppInstall &&
         cp /tmp/AppsInstall-master/AppInstall.sh ~/.local/share/AppInstall &&
         cp /tmp/AppsInstall-master/AppInstall.desktop ~/.local/share/applications &&
-        cp /tmp/AppsInstall-master/AppInstall.svg ~/.local/share/AppInstall &&
-        echo "# Adiciona o comando 'appinstall' para encurtar o chamado do app.
-        alias appinstall='sh ~/.local/share/AppInstall/AppInstall.sh'" >> ~/.bashrc &&
+        sudo ln -sf ~/.local/share/AppInstall/AppInstall.sh /usr/bin/appinstall &&
         clear &&
         echo -e "\033[0;31m 
         Agora procure por App Install no seu menu de Aplicativos ou execute 'appinstall' no seu terminal \033[0m";; 
