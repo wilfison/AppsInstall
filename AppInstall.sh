@@ -19,7 +19,7 @@ $green Desenvolvimento: \033[0m
     $green  3\033[0m ➜ $blue Cordova Phonegap \033[0m                |    $green 17\033[0m ➜ $blue Ionic  \033[0m
     $green  4\033[0m ➜ $blue Nodejs 8.x \033[0m                      |    $green 18\033[0m ➜ $blue My ZSH  \033[0m
     $green  5\033[0m ➜ $blue LAMP + PhpMyAdmin \033[0m               |    $green 19\033[0m ➜ $blue Open Jdk 8  \033[0m
-    $green  6\033[0m ➜ $blue Sublime Text 3 \033[0m                  |    $green 20\033[0m ➜ $blue Java e Jdk Default  \033[0m
+    $green  6\033[0m ➜ $blue Visual Code \033[0m                     |    $green 20\033[0m ➜ $blue Java e Jdk Default  \033[0m
 
 $green Ferramentas e outros: \033[0m
 $blue 
@@ -80,6 +80,11 @@ case $opcao in
         sudo apt-get install -y build-essential &&
         curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - &&
         sudo apt-get install nodejs -y &&
+        mkdir ~/.npm-global &&
+        npm config set prefix '~/.npm-global' &&
+        echo "# muda o diretório global do NPM para a home
+        export PATH=~/.npm-global/bin:$PATH" >> ~/.profile &&
+        source ~/.profile &&
         echo "$green Node instalado com sucesso \033[0m";;
     5)
         sudo apt install lamp-server^ -y &&
@@ -88,12 +93,12 @@ case $opcao in
         echo "$green LAMP e PhpMyAdmin instalado com sucesso \033[0m"
         echo "$blue Acesse localhost no seu navegador \033[0m";;
     6)
-        wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
-        sudo apt-get install apt-transport-https &&
-        echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
+        curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg &&
+        sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg &&
+        sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' &&
         sudo apt update &&
-        sudo apt install sublime-text -y &&
-        echo "$green Sublime-Text instalado com sucesso \033[0m";;
+        sudo apt-get install code -y &&
+        echo "$green Visual Code instalado com sucesso \033[0m";;
     7)
         cd ~/ &&
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
@@ -110,7 +115,7 @@ case $opcao in
         sudo tar Jxf telegram.tar.xz -C /opt/ &&
         sudo mv /opt/Telegram*/ /opt/telegram &&
         sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram &&
-        echo '[Desktop Entry]\n Version=1.0\n Exec=/opt/telegram/Telegram\n Icon=Telegram\n Type=Application\n Categories=Application;Network;' | sudo tee /usr/share/applications/telegram.desktop &&
+        telegram && exit &&
         echo "$green Telegram instalado com sucesso \033[0m";;
     9)
         sudo add-apt-repository ppa:libreoffice/ppa -y &&
@@ -228,7 +233,7 @@ case $opcao in
         cp /tmp/AppsInstall-master/AppInstall.sh ~/.local/share/AppInstall &&
         cp /tmp/AppsInstall-master/AppInstall.desktop ~/.local/share/applications &&
         cp /tmp/AppsInstall-master/AppInstall.svg ~/.local/share/AppInstall &&
-        echo "# Adiciona o comando appinstall para encurtar o chamado do app.
+        echo "# Adiciona o comando 'appinstall' para encurtar o chamado do app.
         alias appinstall='sh ~/.local/share/AppInstall/AppInstall.sh'" >> ~/.bashrc &&
         clear &&
         echo -e "\033[0;31m 
