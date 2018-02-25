@@ -144,21 +144,20 @@ case $opcao in
         echo "$green Bleachbit instalado com sucesso \033[0m";;
 
     15)
-        sudo apt install -y build-essential &&
+        sudo apt install -y autoconf automake build-essential python-dev &&
         sudo apt install git &&
         cd ~/.local &&
         git clone https://github.com/facebook/watchman.git &&
         cd watchman &&
-        git checkout v4.1.0 &&
+        git checkout v4.7.0 &&
         ./autogen.sh &&
         ./configure &&
         make &&
         sudo make install &&
+        echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && 
+        echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_instances && 
+        watchman shutdown-server &&
         cd .. &&
-        wget https://facebook.github.io/flow/downloads/flow-linux64-latest.zip &&
-        unzip flow-linux64-latest.zip &&
-        cd flow &&
-        sudo mv flow /usr/local/bin/flow &&
         npm install -g react-native-cli &&
         echo "$green React Native instalado com sucesso \033[0m";;
     16) 
