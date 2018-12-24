@@ -10,11 +10,11 @@
 
 1. Faça o download do arquivo clicando [aqui](https://github.com/Wilfison/AppsInstall/archive/master.zip)
 2. Descompacte o arquivo ZIP.
-3. Execute <code>install.sh</code> clicando duas vezes no arquivo ou abra um terminal na pasta e digite:
+3. Execute `install.sh` clicando duas vezes no arquivo ou abra um terminal na pasta e digite:
 
-´´´
-    $ sudo sh ./AppInstall.sh
-´´´
+```
+$ sudo sh ./AppInstall.sh
+```
 
 4. Se você apenas deseja instalar um programa digite o número corespondente a ele na lista.
 5. Se você deseja instalar outros apps recomendamos que use a opção "00" e instale no seu pc, você poderá escontrar o App Install no seu menu de aplicativos.
@@ -24,9 +24,9 @@
 
 1. Execute AppInstall no seu menu de aplicativos ou <code>$ appinstall</code> em um terminal (caso tenha instalado) ou use o comando abaixo:
 
-
-    $ sh -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/AppInstall.sh -O -)"
-
+```
+$ sh -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/AppInstall.sh -O -)"
+```
 
 2. Escolha qual programa deseja instalar, digite o número correspondente e precione enter
 3. Aguarde o fim da instalação e confirmação da instalação com sucesso
