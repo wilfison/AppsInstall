@@ -1,4 +1,5 @@
 [Desktop Entry]
+Version=1.2
 Name=App Install
 Comment=Instala vários programas e prepara ambientes para programação sem que você digite códigos
 Exec=sh -c "~/.local/share/AppInstall/AppInstall.sh"
@@ -6,4 +7,4 @@ Icon=terminal
 Terminal=true
 Type=Application
 Categories=Application;Development;
-Name[pt_BR]=appinstall
+Name[pt_BR]=AppInstall
