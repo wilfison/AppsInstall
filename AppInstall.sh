@@ -59,13 +59,20 @@ fi
 
 case $opcao in
 	1)
+		echo "Qual versão do ruby você irá ultilizar? "
+		read rubyversion
+		if [ -z $rubyversion ]; then
+			rubyversion=\curl -L https://get.rvm.io | bash -s stable --ruby
+			exit
+		fi
+		rubyInstall=rvm install $rubyversion
 		echo "$green Instalando componentes necessários! \033[0m" &&
 		sudo apt install -y build-essential curl gnupg2 autoconf bison libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev libpq-dev ruby-dev &&
 		echo "$green Instalando RVM \033[0m" &&
-		gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 &&
-		\curl -sSL https://get.rvm.io | bash &&
+		gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB &&
+		\curl -sSL https://get.rvm.io | bash -s stable &&
 		echo "$green Instalando Ruby \033[0m" &&
-		\curl -sSL https://get.rvm.io | bash -s stable --ruby &&
+		$rubyInstall &&
 		echo "$green Instalando o Rails \033[0m" &&
 		\curl -sSL https://get.rvm.io | bash -s stable --rails &&
 		echo "$green Instalando PostgreSql \033[0m" &&
@@ -359,7 +366,18 @@ case $opcao in
 		echo '[Desktop Entry]\n Version=1.0\n Name=wpsspreadsheets\n Exec=/opt/wpsoffice/et\n Icon=/opt/wpsoffice/resource/icons/hicolor/256x256/apps/wps-office-etmain.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/wpsspreadsheets.desktop &&
 		echo "$green WPS Office instalado com sucesso \033[0m";;
 
-
+	30)
+		echo "Qual versão do ruby você irá ultilizar? "
+		read rubyversion
+		if [ [-z $rubyversion] ]; then
+			echo "Instalando versão mais recente!" &&
+			\curl -L https://get.rvm.io | bash -s stable --ruby &&
+			exit
+		else
+			echo "Instalando versão $rubyversion" &&
+			rvm install $rubyversion
+			echo "$rubyInstaler"
+		fi;;
 
 	0)
 		echo "\033[0; Saindo... \033[0m"
