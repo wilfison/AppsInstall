@@ -1,10 +1,7 @@
 #!/bin/bash
 
-blue="\033[0;34m"
-green="\033[0;32m"
-red="\033[0;31m"
-yellow="\e[33m"
-close_color="\033[0m"
+BASEDIR=$(dirname "$0")
+source $BASEDIR/components/colors.sh
 
 while true; do
 
@@ -51,48 +48,9 @@ current_option=$(echo $opcao | tr "," " ")
 for addr in $current_option
 do
 	case $addr in
-		1)
-			echo -e "Qual versão do ruby você irá ultilizar? "
-			read rubyversion
-			if [ -z $rubyversion ]; then
-				rubyversion=2.5.1
-				echo -e $rubyversion
-				exit;
-			fi
-			rubyInstall=rvm install $rubyversion
-			echo -e "$green Instalando componentes necessários! $close_color" &&
-			sudo apt install -y build-essential curl gnupg2 autoconf bison libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev libpq-dev ruby-dev &&
-			echo -e "$green Instalando RVM $close_color" &&
-			gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB &&
-			\curl -sSL https://get.rvm.io | bash -s stable &&
-			echo -e "$green Instalando Ruby $close_color" &&
-			$rubyInstall &&
-			echo -e "$green Instalando o Rails $close_color" &&
-			\curl -sSL https://get.rvm.io | bash -s stable --rails &&
-			echo -e "$green Instalando PostgreSql $close_color" &&
-			sudo apt install postgresql postgresql-contrib libpq-dev -y &&
-			sudo chown -R $(whoami) /var/lib/gems &&
-			echo -e "$green Finalizando $close_color" &&
-			sudo gem install rails &&
-			sudo gem install bundle &&
-			echo -e "$green Ruby On Rails instalado com sucesso $close_color" &&
-			echo -e "$blue Estamos prontos! Navegue até o diretório do seu projeto e execute 'bundle install' $close_color";;
+		1) bash $BASEDIR/components/rails_rvm.sh;;
 
-
-
-		2)
-			echo -e "$green Instalando componentes necessários! $close_color" &&
-			sudo apt-get install -y build-essential &&
-			echo -e "$green Instalando SSH $close_color" &&
-			sudo apt install ssh -y &&
-			echo -e "$green Instalando o GIT $close_color" &&
-			sudo apt install git -y &&
-			echo -e "$green Git instalado com sucesso $close_color"
-			echo -e "$green Agora use os seguintes comandos para configurar seu Git $close_color"
-			echo -e "$blue git config --global user.name 'seu_nome_de_usuário' $close_color"
-			echo -e "$blue git config --global user.email seu_email_aqui $close_color";;
-
-
+		2) bash $BASEDIR/components/git.sh;;
 
 		3)
 			echo -e "$green Instalando componentes necessários! $close_color" &&
