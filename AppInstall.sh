@@ -12,26 +12,26 @@ echo -e "$blue
 $close_color
 $green Desenvolvimento: $close_color
  
-$green  1 $close_color ➜ $blue RVM + Rails + PostgreSql $close_color |    $green 12 $close_color ➜ $blue React Native CLI  $close_color      
-$green  2 $close_color ➜ $blue Git $close_color                      |    $green 13 $close_color ➜ $blue Electron  $close_color          
-$green  3 $close_color ➜ $blue NVM $close_color                      |    $green 14 $close_color ➜ $blue Ionic  $close_color             
-$green  4 $close_color ➜ $blue Nodejs 12 $close_color                |    $green 15 $close_color ➜ $blue My ZSH  $close_color						
-$green  5 $close_color ➜ $blue LAMP + PhpMyAdmin $close_color        |    $green 16 $close_color ➜ $blue Open Jdk 8  $close_color				
+$green  1 $close_color ➜ $blue RVM + Rails + PostgreSql $close_color |    $green 12 $close_color ➜ $blue React Native CLI  $close_color
+$green  2 $close_color ➜ $blue Git $close_color                      |    $green 13 $close_color ➜ $blue Electron  $close_color
+$green  3 $close_color ➜ $blue NVM $close_color                      |    $green 14 $close_color ➜ $blue Ionic  $close_color
+$green  4 $close_color ➜ $blue Nodejs 12 $close_color                |    $green 15 $close_color ➜ $blue My ZSH  $close_color
+$green  5 $close_color ➜ $blue LAMP + PhpMyAdmin $close_color        |    $green 16 $close_color ➜ $blue Open Jdk 8  $close_color
 $green  6 $close_color ➜ $blue Visual Code $close_color              |    $green 17 $close_color ➜ $blue Docker  $close_color
-																																																																					
-$green Ferramentas e outros: $close_color																																																
-																																																																					
-$green  7 $close_color ➜ $blue Google Chrome $close_color            																																		
-$green  8 $close_color ➜ $blue Telegram $close_color                 																																		
-$green 10 $close_color ➜ $blue Ubuntu Restricted Extras $close_color 																																		
-$green 11 $close_color ➜ $blue ZIP, RAR, 7-ZIP, etc.  $close_color																																				
-																																																																					
-																																																																					
-		    00 ➜ Instalar no PC    0 ➜ Sair  																																											
+																																		
+$green Ferramentas e outros: $close_color														
+																																		
+$green  7 $close_color ➜ $blue Google Chrome $close_color           
+$green  8 $close_color ➜ $blue Telegram $close_color                
+$green 10 $close_color ➜ $blue Ubuntu Restricted Extras $close_color
+$green 11 $close_color ➜ $blue ZIP, RAR, 7-ZIP, etc.  $close_color	
+																																		
+																																		
+		               0 ➜ Sair  																				
 $blue
  ====================== Criado por Wilfison Batista ===================== $close_color
 "
-echo -e "$green Digite o número dos componentes a serem instalados separados por virgula: ex: 2,10,11 $close_color"
+echo -e "$green Digite o número dos componentes a serem instalados separados por virgula: $close_color"
 
 echo -e -n "$green \n\r ➜$close_color "
 
@@ -221,22 +221,6 @@ do
 		0)
 			echo -e "\033[0; Saindo... $close_color"
 			exit;;
-
-
-		00)
-			echo -e "$green Baixando instalador... $close_color" &&
-			wget https://github.com/Wilfison/AppsInstall/archive/master.zip -O ~/AppInstall.zip &&
-			unzip ~/AppInstall.zip -d ~/ &&
-			rm -rf -f ~/.local/share/AppInstall &&
-			rm -f ~/.local/share/applications/AppInstall.desktop &&
-			mv ~/AppsInstall-master ~/.local/share/AppInstall &&
-			sudo mv ~/.local/share/AppInstall/AppInstall.desktop /usr/share/applications &&
-			sudo ln -sf ~/.local/share/AppInstall/AppInstall.sh /usr/bin/appinstall &&
-			rm ~/AppInstall.zip &&
-			clear &&
-			echo -e "$green App Install instalado com sucesso $close_color" &&
-			echo -e -e "Agora procure por App Install no seu menu de Aplicativos ou execute 'appinstall' no seu terminal";; 
-
 
 
 		*)
