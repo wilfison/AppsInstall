@@ -127,17 +127,17 @@ do
 			echo -e "$green Baixando o instalador... $close_color" &&
 			wget "https://telegram.org/dl/desktop/linux" -O telegram.tar.xz &&
 			echo -e "$green Verificando se existe versão anterior... $close_color" &&
-			sudo rm -f -Rf /opt/telegram* &&
-			sudo rm -f -Rf /usr/bin/telegram &&
-			sudo rm -f -Rf /usr/share/applications/telegram.desktop &&
+			sudo rm -rf -f /opt/telegram* &&
+			sudo rm -rf -f /usr/bin/telegram &&
+			sudo rm -rf -f /usr/share/applications/telegram.desktop &&
 			echo -e "$green Instalando... $close_color" &&
 			sudo tar Jxf telegram.tar.xz -C /opt/ &&
 			sudo mv /opt/Telegram* /opt/telegram &&
 			sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram &&
 			sudo chmod -R 777 /opt/telegram &&
+			echo '[Desktop Entry]\n Version=1.0\n Name=Telegram Desktop\n Comment=Official desktop application for the Telegram messaging service\n TryExec=/home/william/telegram/Telegram\n Exec=/opt/telegram/Telegram -- %u\n Icon=telegram\n Terminal=false\n StartupWMClass=TelegramDesktop\n Type=Application\n Categories=Network;InstantMessaging;Qt;\n MimeType=x-scheme-handler/tg;\n Keywords=tg;chat;im;messaging;messenger;sms;tdesktop;\n X-GNOME-UsesNotifications=true' | sudo tee /usr/share/applications/telegramdesktop.desktop &&
 			rm -f telegram.tar.xz &&
-			echo -e "$green Telegram instalado com sucesso $close_color" &&
-			telegram &;;
+			echo -e "$green Telegram instalado com sucesso $close_color";;
 
 
 
@@ -225,13 +225,14 @@ do
 
 		00)
 			echo -e "$green Baixando instalador... $close_color" &&
-			wget https://github.com/Wilfison/AppsInstall/archive/master.zip -O /tmp/AppInstall.zip &&
-			unzip /tmp/AppInstall.zip -d /tmp &&      
-			mkdir ~/.local/share/AppInstall &&
-			cp /tmp/AppsInstall-master/AppInstall.sh ~/.local/share/AppInstall &&
-			cp /tmp/AppsInstall-master/AppInstall.svg ~/.local/share/AppInstall &&
-			cp /tmp/AppsInstall-master/AppInstall.desktop ~/.local/share/applications &&
+			wget https://github.com/Wilfison/AppsInstall/archive/master.zip -O ~/AppInstall.zip &&
+			unzip ~/AppInstall.zip -d ~/ &&
+			rm -rf -f ~/.local/share/AppInstall &&
+			rm -f ~/.local/share/applications/AppInstall.desktop &&
+			mv ~/AppsInstall-master ~/.local/share/AppInstall &&
+			sudo mv ~/.local/share/AppInstall/AppInstall.desktop /usr/share/applications &&
 			sudo ln -sf ~/.local/share/AppInstall/AppInstall.sh /usr/bin/appinstall &&
+			rm ~/AppInstall.zip &&
 			clear &&
 			echo -e "$green App Install instalado com sucesso $close_color" &&
 			echo -e -e "Agora procure por App Install no seu menu de Aplicativos ou execute 'appinstall' no seu terminal";; 
