@@ -22,11 +22,15 @@ rvm install $rubyversion &&
 echo -e "$green Instalando o Rails $close_color" &&
 \curl -sSL https://get.rvm.io | bash -s stable --rails &&
 
-echo -e "$green Instalando PostgreSql $close_color" &&
-sudo apt install postgresql postgresql-contrib libpq-dev -y &&
-sudo chown -R $(whoami) /var/lib/gems &&
+echo -e "$green Deseja instalar PostgreSql?$close_color [s/n]"
+read postgresql
+if [ $postgresql = "s" ]; then
+  echo -e "$green Instalando PostgreSql $close_color"
+  sudo apt install postgresql postgresql-contrib libpq-dev -y
+fi
 
 echo -e "$green Finalizando $close_color" &&
+sudo chown -R $(whoami) /var/lib/gems &&
 sudo gem install rails &&
 sudo gem install bundle &&
 
