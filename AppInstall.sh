@@ -12,12 +12,12 @@ echo -e "$blue
 $close_color
 $green Desenvolvimento: $close_color
  
-$green  1 $close_color ➜ $blue RVM + Rails + PostgreSql $close_color |    $green 12 $close_color ➜ $blue React Native  $close_color      
+$green  1 $close_color ➜ $blue RVM + Rails + PostgreSql $close_color |    $green 12 $close_color ➜ $blue React Native CLI  $close_color      
 $green  2 $close_color ➜ $blue Git $close_color                      |    $green 13 $close_color ➜ $blue Electron  $close_color          
 $green  3 $close_color ➜ $blue NVM $close_color                      |    $green 14 $close_color ➜ $blue Ionic  $close_color             
 $green  4 $close_color ➜ $blue Nodejs 12 $close_color                |    $green 15 $close_color ➜ $blue My ZSH  $close_color						
 $green  5 $close_color ➜ $blue LAMP + PhpMyAdmin $close_color        |    $green 16 $close_color ➜ $blue Open Jdk 8  $close_color				
-$green  6 $close_color ➜ $blue Visual Code $close_color              |    $green 27 $close_color ➜ $blue Java e Jdk Default  $close_color
+$green  6 $close_color ➜ $blue Visual Code $close_color              |    $green 17 $close_color ➜ $blue Docker  $close_color
 																																																																					
 $green Ferramentas e outros: $close_color																																																
 																																																																					
@@ -134,6 +134,7 @@ do
 			sudo tar Jxf telegram.tar.xz -C /opt/ &&
 			sudo mv /opt/Telegram* /opt/telegram &&
 			sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram &&
+			sudo chmod -R 777 /opt/telegram &&
 			rm -f telegram.tar.xz &&
 			echo -e "$green Telegram instalado com sucesso $close_color" &&
 			telegram &;;
@@ -204,10 +205,18 @@ do
 
 
 
-		27)
-			echo -e "$green Instalando... $close_color" &&
-			sudo apt-get install -y default-jre default-jdk &&
-			echo -e "$green Java e Jdk Default instalados com sucesso $close_color";;    
+		17)
+			echo -e "$green Removendo versões antigas $close_color"
+			sudo apt remove -y docker docker-engine docker.io containerd runc &&
+			echo -e "$green Configurando ambiente! $close_color"
+			sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common &&
+			echo -e "$green Instalando... $close_color"
+			curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - &&
+			sudo apt install -y docker-ce docker-ce-cli containerd.io &&
+			sudo apt update &&
+			sudo groupadd docker &&
+			sudo usermod -aG docker $USER &&
+			echo -e "$green Docker instalados com sucesso $close_color";;    
 
 		0)
 			echo -e "\033[0; Saindo... $close_color"
