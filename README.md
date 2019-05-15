@@ -1,44 +1,31 @@
 # AppsInstall
-## Mini Aplicativo para prepar ambientes de Programação Web e instalar algumas ferramentas para lhe ajudar.
+### Script para automatização e instalação de ambientes de Programação para Ubuntu e Derivados.
 
 
-![ScreenShot do App](https://github.com/Wilfison/AppsInstall/raw/master/screenshot.png)
+![ScreenShot do App](./screenshot.png)
 
 
 ## Instalação:
 
 
-1. Faça o download do arquivo clicando [aqui](https://github.com/Wilfison/AppsInstall/archive/master.zip)
-2. Descompacte o arquivo ZIP.
-3. Execute `install.sh` clicando duas vezes no arquivo ou abra um terminal na pasta e digite:
-
+1. Faça o download do arquivo clicando [aqui](https://github.com/Wilfison/AppsInstall/archive/master.zip) ou execute o comando abaixo em um terminal:
+```shell
+bash -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/install.sh -O -)"
 ```
-$ sudo sh ./AppInstall.sh
-```
-
-4. Se você apenas deseja instalar um programa digite o número corespondente a ele na lista.
-5. Se você deseja instalar outros apps recomendamos que use a opção "00" e instale no seu pc, você poderá escontrar o App Install no seu menu de aplicativos.
+2. Aguarde o fim da instalação
+3. Caso tudo ocorra bem você pode encontrar o `App Install` no seu menu de aplicações
 
 ## Instalar Apps
 
 
-1. Execute AppInstall no seu menu de aplicativos ou <code>$ appinstall</code> em um terminal (caso tenha instalado) ou use o comando abaixo:
+1. Procure por `App Install` no seu menu de aplicativos ou execute `appinstall` em um terminal 
 
-```
-$ sh -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/AppInstall.sh -O -)"
-```
+2. Escolha no menu usando o número da opção quais apps deseja instalar separando-os por vírgula, ex: `2,10,11`
 
-2. Escolha qual programa deseja instalar, digite o número correspondente e precione enter
-3. Aguarde o fim da instalação e confirmação da instalação com sucesso
-4. Escolha outro software a ser instalado ou tecle 0 para sair
+3. Aguarde a mensagem de sucesso e pode instalar outros ou usar a opção `0` para sair da aplicação.
 
 ##  Atenção
 
-
-### Alguns programas não podem ser adicionados ao debian por usar PPA's:
-
-- Libre Office
-- Deepin Desktop 
-- Open Jdk 8
-- Wine
-- Stacer
+#### Script somente testado nas distribuições:
+- Ubuntu > 16.04
+- Linux Mint > 18.1

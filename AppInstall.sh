@@ -12,26 +12,26 @@ echo -e "$blue
 $close_color
 $green Desenvolvimento: $close_color
  
-$green  1 $close_color ➜ $blue RVM + Rails + PostgreSql $close_color |    $green 12 $close_color ➜ $blue React Native CLI  $close_color      
-$green  2 $close_color ➜ $blue Git $close_color                      |    $green 13 $close_color ➜ $blue Electron  $close_color          
-$green  3 $close_color ➜ $blue NVM $close_color                      |    $green 14 $close_color ➜ $blue Ionic  $close_color             
-$green  4 $close_color ➜ $blue Nodejs 12 $close_color                |    $green 15 $close_color ➜ $blue My ZSH  $close_color						
-$green  5 $close_color ➜ $blue LAMP + PhpMyAdmin $close_color        |    $green 16 $close_color ➜ $blue Open Jdk 8  $close_color				
+$green  1 $close_color ➜ $blue RVM + Rails + PostgreSql $close_color |    $green 12 $close_color ➜ $blue React Native CLI  $close_color
+$green  2 $close_color ➜ $blue Git $close_color                      |    $green 13 $close_color ➜ $blue Electron  $close_color
+$green  3 $close_color ➜ $blue NVM $close_color                      |    $green 14 $close_color ➜ $blue Ionic  $close_color
+$green  4 $close_color ➜ $blue Nodejs 12 $close_color                |    $green 15 $close_color ➜ $blue My ZSH  $close_color
+$green  5 $close_color ➜ $blue LAMP + PhpMyAdmin $close_color        |    $green 16 $close_color ➜ $blue Open Jdk 8  $close_color
 $green  6 $close_color ➜ $blue Visual Code $close_color              |    $green 17 $close_color ➜ $blue Docker  $close_color
-																																																																					
-$green Ferramentas e outros: $close_color																																																
-																																																																					
-$green  7 $close_color ➜ $blue Google Chrome $close_color            																																		
-$green  8 $close_color ➜ $blue Telegram $close_color                 																																		
-$green 10 $close_color ➜ $blue Ubuntu Restricted Extras $close_color 																																		
-$green 11 $close_color ➜ $blue ZIP, RAR, 7-ZIP, etc.  $close_color																																				
-																																																																					
-																																																																					
-		    00 ➜ Instalar no PC    0 ➜ Sair  																																											
+																																		
+$green Ferramentas e outros: $close_color														
+																																		
+$green  7 $close_color ➜ $blue Google Chrome $close_color           
+$green  8 $close_color ➜ $blue Telegram $close_color                
+$green 10 $close_color ➜ $blue Ubuntu Restricted Extras $close_color
+$green 11 $close_color ➜ $blue ZIP, RAR, 7-ZIP, etc.  $close_color	
+																																		
+																																		
+		               0 ➜ Sair  																				
 $blue
  ====================== Criado por Wilfison Batista ===================== $close_color
 "
-echo -e "$green Digite o número dos componentes a serem instalados separados por virgula: ex: 2,10,11 $close_color"
+echo -e "$green Digite o número dos componentes a serem instalados separados por virgula: $close_color"
 
 echo -e -n "$green \n\r ➜$close_color "
 
@@ -127,17 +127,17 @@ do
 			echo -e "$green Baixando o instalador... $close_color" &&
 			wget "https://telegram.org/dl/desktop/linux" -O telegram.tar.xz &&
 			echo -e "$green Verificando se existe versão anterior... $close_color" &&
-			sudo rm -f -Rf /opt/telegram* &&
-			sudo rm -f -Rf /usr/bin/telegram &&
-			sudo rm -f -Rf /usr/share/applications/telegram.desktop &&
+			sudo rm -rf -f /opt/telegram* &&
+			sudo rm -rf -f /usr/bin/telegram &&
+			sudo rm -rf -f /usr/share/applications/telegram.desktop &&
 			echo -e "$green Instalando... $close_color" &&
 			sudo tar Jxf telegram.tar.xz -C /opt/ &&
 			sudo mv /opt/Telegram* /opt/telegram &&
 			sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram &&
 			sudo chmod -R 777 /opt/telegram &&
+			echo '[Desktop Entry]\n Version=1.0\n Name=Telegram Desktop\n Comment=Official desktop application for the Telegram messaging service\n TryExec=/home/william/telegram/Telegram\n Exec=/opt/telegram/Telegram -- %u\n Icon=telegram\n Terminal=false\n StartupWMClass=TelegramDesktop\n Type=Application\n Categories=Network;InstantMessaging;Qt;\n MimeType=x-scheme-handler/tg;\n Keywords=tg;chat;im;messaging;messenger;sms;tdesktop;\n X-GNOME-UsesNotifications=true' | sudo tee /usr/share/applications/telegramdesktop.desktop &&
 			rm -f telegram.tar.xz &&
-			echo -e "$green Telegram instalado com sucesso $close_color" &&
-			telegram &;;
+			echo -e "$green Telegram instalado com sucesso $close_color";;
 
 
 
@@ -221,21 +221,6 @@ do
 		0)
 			echo -e "\033[0; Saindo... $close_color"
 			exit;;
-
-
-		00)
-			echo -e "$green Baixando instalador... $close_color" &&
-			wget https://github.com/Wilfison/AppsInstall/archive/master.zip -O /tmp/AppInstall.zip &&
-			unzip /tmp/AppInstall.zip -d /tmp &&      
-			mkdir ~/.local/share/AppInstall &&
-			cp /tmp/AppsInstall-master/AppInstall.sh ~/.local/share/AppInstall &&
-			cp /tmp/AppsInstall-master/AppInstall.svg ~/.local/share/AppInstall &&
-			cp /tmp/AppsInstall-master/AppInstall.desktop ~/.local/share/applications &&
-			sudo ln -sf ~/.local/share/AppInstall/AppInstall.sh /usr/bin/appinstall &&
-			clear &&
-			echo -e "$green App Install instalado com sucesso $close_color" &&
-			echo -e -e "Agora procure por App Install no seu menu de Aplicativos ou execute 'appinstall' no seu terminal";; 
-
 
 
 		*)
