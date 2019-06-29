@@ -31,7 +31,7 @@ fi
 
 echo -e "$green Finalizando $close_color" &&
 sudo chown -R $(whoami) /var/lib/gems &&
-sudo gem install rails &&
-sudo gem install bundle &&
+gem install rails &&
+gem install bundle &&
 
-echo -e "$green Ruby On Rails instalado com sucesso na versão: $rubyversion $close_color"
+echo -e "$green Ruby On Rails instalado com sucesso na versão:$close_color$blue $rubyversion $close_color"

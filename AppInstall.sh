@@ -2,6 +2,7 @@
 
 BASEDIR=$(dirname "$0")
 source $BASEDIR/components/colors.sh
+source $BASEDIR/profile.sh
 
 while true; do
 
@@ -58,10 +59,10 @@ do
 			echo -e "$green Baixando o código fonte! $close_color" &&
 			curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash &&
 			echo -e "$green Atualizando as variáveis do sitema! $close_color" &&
-			export NVM_DIR="$HOME/.nvm" >> ~/.profile &&
-			[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  >> ~/.profile &&
-			[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" >> ~/.profile &&
-			source ~/.profile &&
+			export NVM_DIR="$HOME/.nvm" >> $MY_PROFILE &&
+			[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  >> $MY_PROFILE &&
+			[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" >> $MY_PROFILE &&
+			source $MY_PROFILE &&
 			command -v nvm &&
 			echo -e "$green NVM  instalado com sucesso na versão: $close_color" &&
 			nvm --version;;
@@ -78,8 +79,8 @@ do
 			mkdir ~/.npm-global &&
 			npm config set prefix '~/.npm-global' &&
 			echo -e "$green Mudando o diretório global do NPM para a home $close_color"
-			export PATH="~/.npm-global/bin:$PATH" >> ~/.profile &&
-			source ~/.profile &&
+			export PATH="~/.npm-global/bin:$PATH" >> $MY_PROFILE &&
+			source $MY_PROFILE &&
 			echo -e "$green Node instalado com sucesso! Você pode usar o NPM sem sudo $close_color";;
 
 
