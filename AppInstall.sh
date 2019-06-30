@@ -2,7 +2,7 @@
 
 BASEDIR=$(dirname "$0")
 source $BASEDIR/components/colors.sh
-source $BASEDIR/profile.sh
+source $BASEDIR/components/profile.sh
 
 while true; do
 
