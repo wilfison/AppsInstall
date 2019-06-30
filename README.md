@@ -2,7 +2,7 @@
 ### Script para automatização e instalação de ambientes de Programação para Ubuntu e Derivados.
 
 
-![ScreenShot do App](./screenshot.png)
+![ScreenShot](./screenshot.png)
 
 
 ## Instalação:
@@ -15,17 +15,16 @@ bash -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/in
 2. Aguarde o fim da instalação
 3. Caso tudo ocorra bem você pode encontrar o `App Install` no seu menu de aplicações
 
-## Instalar Apps
+## Como Usar
 
-
-1. Procure por `App Install` no seu menu de aplicativos ou execute `appinstall` em um terminal 
+1. Após instalar, procure por `App Install` no seu menu de aplicativos ou execute `appinstall` em um terminal 
 
 2. Escolha no menu usando o número da opção quais apps deseja instalar separando-os por vírgula, ex: `2,10,11`
 
-3. Aguarde a mensagem de sucesso e pode instalar outros ou usar a opção `0` para sair da aplicação.
+3. Aguarde a mensagem de sucesso para instalar outro app ou use a opção `0` para sair da aplicação.
 
 ##  Atenção
 
 #### Script somente testado nas distribuições:
-- Ubuntu > 16.04
-- Linux Mint > 18.1
+- Ubuntu >= 16.04
+- Linux Mint >= 18.1
