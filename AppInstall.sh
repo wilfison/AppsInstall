@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASEDIR=$(dirname "$0")
+BASEDIR=$(readlink -f .)
 source $BASEDIR/components/helpers/colors.sh
 source $BASEDIR/components/helpers/profile.sh
 

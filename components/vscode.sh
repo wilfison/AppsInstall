@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $(dirname "$0")/helpers/colors.sh
+source $(readlink -f .)/components/helpers/colors.sh
 
 echo -e "$green Installing Access Key! $close_color" &&
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg &&

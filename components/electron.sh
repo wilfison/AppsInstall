@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $(dirname "$0")/helpers/colors.sh
+source $(readlink -f .)/components/helpers/colors.sh
 
 echo -e "$green Installing... $close_color" &&
 npm i -g electron electron-packager &&

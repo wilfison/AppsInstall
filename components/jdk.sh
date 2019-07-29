@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $(dirname "$0")/helpers/colors.sh
+source $(readlink -f .)/components/helpers/colors.sh
 
 echo -e "$green Adding PPA $close_color" &&
 sudo add-apt-repository ppa:openjdk-r/ppa -y &&
