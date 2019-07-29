@@ -26,7 +26,6 @@ $green 50 $close_color ➜ $blue Google Chrome $close_color
 $green 51 $close_color ➜ $blue Telegram $close_color                
 $green 52 $close_color ➜ $blue Codecs and Extras $close_color
 																																		
-																																		
 		               0 ➜ Sair  																				
 $blue
  ====================== Created by Wilfison Batista ===================== $close_color
@@ -40,7 +39,7 @@ read option
 # check if an option has been entered
 if [ -z $option ]; then
 	echo -e "$red ✗ ERROR: $close_color Please enter a valid option!"
-	exit
+	exit 1;
 fi
 
 # splitter inputs
