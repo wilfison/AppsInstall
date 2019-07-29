@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $(dirname "$0")/colors.sh
+source $(dirname "$0")/helpers/colors.sh
 
 echo -e "$green Which version of ruby do you use by default?  $close_color"
 read rubyversion
