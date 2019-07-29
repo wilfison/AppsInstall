@@ -16,16 +16,16 @@ $green Development: $close_color
 $green  1 $close_color ➜ $blue RVM + Rails + PostgreSql $close_color |    $green 12 $close_color ➜ $blue React Native CLI  $close_color
 $green  2 $close_color ➜ $blue Git $close_color                      |    $green 13 $close_color ➜ $blue Electron  $close_color
 $green  3 $close_color ➜ $blue NVM $close_color                      |    $green 14 $close_color ➜ $blue Ionic  $close_color
-$green  4 $close_color ➜ $blue Nodejs 12 $close_color                |    $green 15 $close_color ➜ $blue My ZSH  $close_color
+$green  4 $close_color ➜ $blue Nodejs $close_color                   |    $green 15 $close_color ➜ $blue My ZSH  $close_color
 $green  5 $close_color ➜ $blue LAMP + PhpMyAdmin $close_color        |    $green 16 $close_color ➜ $blue Open Jdk 8  $close_color
 $green  6 $close_color ➜ $blue Visual Code $close_color              |    $green 17 $close_color ➜ $blue Docker  $close_color
 																																		
 $green Tools and others: $close_color														
 																																		
-$green  7 $close_color ➜ $blue Google Chrome $close_color           
-$green  8 $close_color ➜ $blue Telegram $close_color                
-$green 10 $close_color ➜ $blue Ubuntu Restricted Extras $close_color
-$green 11 $close_color ➜ $blue ZIP, RAR, 7-ZIP, etc.  $close_color	
+$green 50 $close_color ➜ $blue Google Chrome $close_color           
+$green 51 $close_color ➜ $blue Telegram $close_color                
+$green 52 $close_color ➜ $blue Ubuntu Restricted Extras $close_color
+$green 53 $close_color ➜ $blue ZIP, RAR, 7-ZIP, etc.  $close_color	
 																																		
 																																		
 		               0 ➜ Sair  																				
@@ -55,18 +55,7 @@ do
 
 		3) bash $BASEDIR/components/nvm.sh;;
 
-		4)
-			echo -e "$green Installing required components! $close_color" &&
-			sudo apt install -y build-essential &&
-			echo -e "$green Download installer $close_color" &&
-			curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - &&
-			echo -e "$green Installing... $close_color" &&
-			sudo apt install nodejs -y &&
-			sudo chown -R $(whoami) /usr/local/lib/node_modules &&
-			source $MY_PROFILE &&
-			echo -e "$green Node successfully installed! You can use NPM without # sudo $close_color";;
-
-
+		4) bash $BASEDIR/components/node.sh;;
 
 		5)
 			echo -e "$green Installing.. $close_color" &&
@@ -80,50 +69,6 @@ do
 
 
 		6) bash $BASEDIR/components/vscode.sh;;
-
-
-		7)
-			cd ~/ &&
-			echo -e "$green Downloading installer... $close_color" &&
-			wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
-			echo -e "$green Installing... $close_color" &&
-			sudo dpkg -i google-chrome-stable_current_amd64.deb &&
-			rm google-chrome-stable_current_amd64.deb &&
-			echo -e "$green Google Chrome successfully installed $close_color"
-			google-chrome &;;
-
-
-
-		8)
-			cd ~/ &&
-			echo -e "$green Downloading installer... $close_color" &&
-			wget "https://telegram.org/dl/desktop/linux" -O telegram.tar.xz &&
-			echo -e "$green Checking previous version... $close_color" &&
-			sudo rm -rf -f /opt/telegram* &&
-			sudo rm -rf -f /usr/bin/telegram &&
-			sudo rm -rf -f /usr/share/applications/telegram.desktop &&
-			echo -e "$green Installing... $close_color" &&
-			sudo tar Jxf telegram.tar.xz -C /opt/ &&
-			sudo mv /opt/Telegram* /opt/telegram &&
-			sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram &&
-			sudo chmod -R 777 /opt/telegram &&
-			echo '[Desktop Entry]\n Version=1.0\n Name=Telegram Desktop\n Comment=Official desktop application for the Telegram messaging service\n TryExec=/home/william/telegram/Telegram\n Exec=/opt/telegram/Telegram -- %u\n Icon=telegram\n Terminal=false\n StartupWMClass=TelegramDesktop\n Type=Application\n Categories=Network;InstantMessaging;Qt;\n MimeType=x-scheme-handler/tg;\n Keywords=tg;chat;im;messaging;messenger;sms;tdesktop;\n X-GNOME-UsesNotifications=true' | sudo tee /usr/share/applications/telegramdesktop.desktop &&
-			rm -f telegram.tar.xz &&
-			echo -e "$green Telegram successfully installed $close_color";;
-
-
-
-		10)
-			echo -e "$green Installing... $close_color" &&
-			sudo apt install -y ubuntu-restricted-extras vlc &&
-			echo -e "$green Codecs successfully installed $close_color";;
-
-
-
-		11)
-			echo -e "$green Installing... $close_color" &&
-			sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar -y &&
-			echo -e "$green Descompactadores successfully installed $close_color";;
 
 
 
@@ -187,6 +132,49 @@ do
 			sudo groupadd docker &&
 			sudo usermod -aG docker $USER &&
 			echo -e "$green Docker successfully installed $close_color";;    
+
+		50)
+			cd ~/ &&
+			echo -e "$green Downloading installer... $close_color" &&
+			wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+			echo -e "$green Installing... $close_color" &&
+			sudo dpkg -i google-chrome-stable_current_amd64.deb &&
+			rm google-chrome-stable_current_amd64.deb &&
+			echo -e "$green Google Chrome successfully installed $close_color"
+			google-chrome &;;
+
+
+
+		51)
+			cd ~/ &&
+			echo -e "$green Downloading installer... $close_color" &&
+			wget "https://telegram.org/dl/desktop/linux" -O telegram.tar.xz &&
+			echo -e "$green Checking previous version... $close_color" &&
+			sudo rm -rf -f /opt/telegram* &&
+			sudo rm -rf -f /usr/bin/telegram &&
+			sudo rm -rf -f /usr/share/applications/telegram.desktop &&
+			echo -e "$green Installing... $close_color" &&
+			sudo tar Jxf telegram.tar.xz -C /opt/ &&
+			sudo mv /opt/Telegram* /opt/telegram &&
+			sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram &&
+			sudo chmod -R 777 /opt/telegram &&
+			echo '[Desktop Entry]\n Version=1.0\n Name=Telegram Desktop\n Comment=Official desktop application for the Telegram messaging service\n TryExec=/home/william/telegram/Telegram\n Exec=/opt/telegram/Telegram -- %u\n Icon=telegram\n Terminal=false\n StartupWMClass=TelegramDesktop\n Type=Application\n Categories=Network;InstantMessaging;Qt;\n MimeType=x-scheme-handler/tg;\n Keywords=tg;chat;im;messaging;messenger;sms;tdesktop;\n X-GNOME-UsesNotifications=true' | sudo tee /usr/share/applications/telegramdesktop.desktop &&
+			rm -f telegram.tar.xz &&
+			echo -e "$green Telegram successfully installed $close_color";;
+
+
+
+		52)
+			echo -e "$green Installing... $close_color" &&
+			sudo apt install -y ubuntu-restricted-extras vlc &&
+			echo -e "$green Codecs successfully installed $close_color";;
+
+
+
+		53)
+			echo -e "$green Installing... $close_color" &&
+			sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar -y &&
+			echo -e "$green Descompactadores successfully installed $close_color";;
 
 		0)
 			echo -e "\033[0; bye... $close_color"
