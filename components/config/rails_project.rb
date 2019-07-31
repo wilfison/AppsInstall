@@ -77,6 +77,7 @@ RUBY
 
 # Ruby version
 ########################################
+run 'rm .ruby-version'
 file '.ruby-version', RUBY_VERSION
 
 # Procfile
@@ -106,7 +107,7 @@ gsub_file('config/environments/development.rb', /config\.assets\.debug.*/, 'conf
 # Layout
 ########################################
 run 'rm app/views/layouts/application.html.erb'
-file 'app/views/layouts/application.html.haml', <<-HAML
+file 'app/views/layouts/application.html.haml', <<-HTML
 !!!
 %html
   %head
@@ -125,7 +126,7 @@ file 'app/views/layouts/application.html.haml', <<-HAML
     -# = favicon_link_tag "favicons/site.webmanifest", rel: "manifest"
     -# = favicon_link_tag "favicons/safari-pinned-tab.svg", rel: "mask-icon", color: "#5bbad5"
     
-    %title= content_for?(:title) ? "My App - #{ yield(:title) }" : "My App"
+    %title= content_for?(:title) ? yield(:title) : "My App"
     
     = csrf_meta_tags
     = stylesheet_link_tag "application", media: 'all'
@@ -140,7 +141,7 @@ file 'app/views/layouts/application.html.haml', <<-HAML
       = yield
 
     = javascript_include_tag "application"
-HAML
+HTML
 
 # README
 ########################################

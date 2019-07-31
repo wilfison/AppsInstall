@@ -36,6 +36,6 @@ clear
 ############################
 ############ Build App
 echo -e "$green Building your App  $close_color"
-rails new --database $database $webpack -m $template_dir  $app_name
+rails new --database $database $webpack -m $template_dir  $app_name &&
 
 echo -e "$green $app_name successfully created!  $close_color"
