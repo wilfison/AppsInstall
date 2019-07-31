@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source $(readlink -f .)/components/helpers/colors.sh
-source $(readlink -f .)/helpers/profile.sh
+source $HOME/.local/share/AppInstall/components/helpers/colors.sh
+source $HOME/.local/share/AppInstall/helpers/profile.sh
 
 echo -e "$red Press ENTER to install Latest Current Version!  $close_color"
 echo -e -n "$green Version: [ 10, 11, 12 ] $close_color"

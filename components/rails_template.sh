@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source $(readlink -f .)/components/helpers/colors.sh
-template_dir=$(readlink -f .)/components/config/rails_project.rb
+source $HOME/.local/share/AppInstall/components/helpers/colors.sh
+template_dir=$HOME/.local/share/AppInstall/components/config/rails_project.rb
 ############################
 ############ App Name
 

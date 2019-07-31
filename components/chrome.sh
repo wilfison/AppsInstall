@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $(readlink -f .)/components/helpers/colors.sh
+source $HOME/.local/share/AppInstall/components/helpers/colors.sh
 
 echo -e "$green Downloading installer... $close_color" &&
 cd ~/ &&
