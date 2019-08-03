@@ -1,9 +1,12 @@
 #!/bin/bash
 
-source $HOME/.local/share/AppInstall/components/helpers/colors.sh
+BASEDIR=$HOME/.local/share/AppInstall/components
+source $BASEDIR/helpers/colors.sh
 
 echo -e "$green Installing... $close_color" &&
 sudo apt install zsh -y &&
+bash $BASEDIR/git.sh &&
+
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" &&
 
 echo -e "$green Setting as Default SHELL! $close_color" &&

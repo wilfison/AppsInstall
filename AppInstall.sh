@@ -6,7 +6,9 @@ source $BASEDIR/components/helpers/profile.sh
 
 while true; do
 
-options=$(dialog --stdout --separate-output --checklist 'What are we going to install now?' 20 100 100  \
+options=$(dialog --stdout --separate-output --no-shadow \
+	--checklist 'What are we going to install now?' \
+	20 100 100  \
 	1  "RVM + Rails + PostgreSql" 				off \
  	2  "New Rails Project with Template"  off \
 	3  "Visual Code"  		 								off \
@@ -17,7 +19,10 @@ options=$(dialog --stdout --separate-output --checklist 'What are we going to in
 	8  "Ionic"   													off \
 	9  "Nodejs"  													off \
 	11 "Docker"   												off \
-	10 "My ZSH "  												off
+	10 "My ZSH "  												off \
+	50 "Google Chrome"										off \
+	51 "Telegram"													off \
+	52 "Codecs and Extras"								off
 )
 
 # check if an option has been entered
