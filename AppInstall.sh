@@ -6,47 +6,30 @@ source $BASEDIR/components/helpers/profile.sh
 
 while true; do
 
-echo -e "$blue
- =====================================================================================
- |                         What are we going to install now?                         |
- ===================================================================================== $close_color
-
-$green Development: $close_color
-
-  1 ➜ $blue RVM + Rails + PostgreSql $close_color      2 ➜ $blue New Rails Project with Template $close_color
-  3 ➜ $blue Visual Code $close_color                   4 ➜ $blue React Native CLI $close_color
-  5 ➜ $blue Git $close_color                           6 ➜ $blue Electron  $close_color
-  7 ➜ $blue NVM $close_color                           8 ➜ $blue Ionic  $close_color
-  9 ➜ $blue Nodejs $close_color                       10 ➜ $blue My ZSH  $close_color
- 11 ➜ $blue Docker  $close_color
-
-$green Tools and others: $close_color										
-																																		
- 50 ➜ $blue Google Chrome $close_color           
- 51 ➜ $blue Telegram $close_color                
- 52 ➜ $blue Codecs and Extras $close_color
-
-$blue
- ============================ Created by Wilfison Batista =========================== $close_color
-"
-echo -e "$green Enter the number of components to install by comma-separated: $close_color"
-
-echo -e -n "$green \n\r ➜$close_color "
-
-read option
+options=$(dialog --stdout --separate-output --checklist 'What are we going to install now?' 20 100 100  \
+	1  "RVM + Rails + PostgreSql" 				off \
+ 	2  "New Rails Project with Template"  off \
+	3  "Visual Code"  		 								off \
+	4  "React Native CLI"  								off \
+	5  "Git"   						 								off \
+	6  "Electron"          								off \
+	7  "NVM"     													off \
+	8  "Ionic"   													off \
+	9  "Nodejs"  													off \
+	11 "Docker"   												off \
+	10 "My ZSH "  												off
+)
 
 # check if an option has been entered
-if [ -z $option ]; then
-	echo -e "$red ✗ ERROR: $close_color Please enter a valid option!"
+if [ $? -eq 1 ]; then
+	clear &&
+	echo -e "$green \n \n BYE :) \n \n $close_color" &&
 	exit 1;
 fi
 
-# splitter inputs
-options=$(echo $option | tr "," " ")
-
-for addr in $options
+echo -e $options | while read OPTION
 do
-	case $addr in
+	case $OPTION in
 		1) bash $BASEDIR/components/rails_rvm.sh;;
 
 		2) bash $BASEDIR/components/rails_template.sh;;
@@ -75,10 +58,10 @@ do
 
 		52) bash $BASEDIR/components/extras.sh;;
 
-		0) echo -e "$green bye... $close_color" && exit;;
-
-		*) echo -e "$red ✗ ERROR: $close_color$green Please enter a valid option! $close_color";;
+		*) dialog --title '✗ ERROR:' --msgbox 'Please enter a valid option!' 6 40;;
 	esac
-	done
+
+	dialog --title 'Sucess:' --msgbox 'All items successfully instaled!' 6 40
+done
 done
 
