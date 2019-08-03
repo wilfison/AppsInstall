@@ -3,12 +3,14 @@
 source $HOME/.local/share/AppInstall/components/helpers/colors.sh
 source $HOME/.local/share/AppInstall/helpers/profile.sh
 
-echo -e "$red Press ENTER to install Latest Current Version!  $close_color"
-echo -e -n "$green Version: [ 10, 11, 12 ] $close_color"
-read nodeversion
+nodeversion=$( dialog --stdout --title 'Version to Install' --menu 'Version stable to Install' 0 40 3 \
+  10 "10.x" \
+  11 "11.x" \
+  12 "12.x"
+)
 
-if [ -z $nodeversion ]; then
-  nodeversion=12
+if [ $? = 1 ]; then
+  clear && exit 1;
 fi
 
 NODE_LINK="https://deb.nodesource.com/setup_$nodeversion.x"
