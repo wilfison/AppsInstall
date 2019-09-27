@@ -66,7 +66,7 @@ do
 		*) dialog --title '✗ ERROR:' --msgbox 'Please enter a valid option!' 6 40;;
 	esac
 
-	dialog --title 'Sucess:' --msgbox 'All items successfully instaled!' 6 40
+	dialog --title 'Success:' --msgbox 'All items successfully instaled!' 6 40
 done
 done
 

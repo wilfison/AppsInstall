@@ -31,4 +31,4 @@ if [ $? = 0 ]; then
   sudo apt install -y postgresql postgresql-contrib libpq-dev
 fi
 
-dialog --clear --title 'Sucess:' --msgbox 'Ruby On Rails successfully installed' 6 40
+dialog --clear --title 'Success:' --msgbox 'Ruby On Rails successfully installed' 6 40
