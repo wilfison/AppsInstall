@@ -3,7 +3,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "editor.fontFamily": "Cascadia Code",
+  "editor.fontFamily": "Fira Code",
   "editor.fontSize": 13,
   "editor.renderWhitespace": "none",
   "editor.fontLigatures": true,
