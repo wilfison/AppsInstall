@@ -5,6 +5,11 @@ BASEDIR="$PWD/components"
 source $BASEDIR/helpers/colors.sh
 source $BASEDIR/helpers/profile.sh
 
+# set personal configs
+if [ "$1" == '-d' ]; then
+  bash $BASEDIR/personal_config.sh
+fi
+
 while true; do
 	options=$(dialog --stdout --separate-output --no-shadow --checklist 'What are we going to install now?' 23 100 100  \
 		1  "RVM + Rails + PostgreSql" 				off \

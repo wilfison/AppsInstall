@@ -1,4 +1,5 @@
-
+ 
+ 
 # ==================== GIT ==============================
 # shortcode for git status
 alias gst="git status"
