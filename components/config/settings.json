@@ -13,13 +13,10 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Dracula",
-  "workbench.startupEditor": "newUntitledFile",
   "oneDarkPro.editorTheme": "ayu",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "gitlens.currentLine.enabled": false,
@@ -45,6 +42,5 @@
   "[js]": {
     "editor.defaultFormatter": "eslint"
   },
-  "eslint.run": "onSave",
-  "eslint.autoFixOnSave": true
+  "eslint.run": "onSave"
 }
