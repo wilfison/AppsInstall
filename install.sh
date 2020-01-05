@@ -14,5 +14,7 @@ sudo mv ~/.local/share/AppInstall/AppInstall.desktop /usr/share/applications &&
 sudo ln -sf ~/.local/share/AppInstall/AppInstall.sh /usr/bin/appinstall &&
 rm ~/AppInstall.zip &&
 clear &&
+echo -e "$green Installing essential tools.. $close_color" &&
+sudo apt install dialog -y &&
 echo -e "$green App Install successfully installed $close_color" &&
 echo -e "Now look for App Install in your applications menu or run$blue appinstall$close_color on your terminal"

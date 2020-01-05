@@ -1,6 +1,8 @@
 #!/bin/bash
 
-BASEDIR="$HOME/.local/share/AppInstall"
+BASEDIR=$PWD #use in development
+
+# BASEDIR="$HOME/.local/share/AppInstall"
 source $BASEDIR/components/helpers/colors.sh
 source $BASEDIR/components/helpers/profile.sh
 
@@ -18,8 +20,8 @@ options=$(dialog --stdout --separate-output --no-shadow \
 	7  "NVM"     													off \
 	8  "Ionic"   													off \
 	9  "Nodejs"  													off \
-	11 "Docker"   												off \
 	10 "My ZSH "  												off \
+	11 "Docker"   												off \
 	50 "Google Chrome"										off \
 	51 "Telegram"													off \
 	52 "Codecs and Extras"								off
@@ -34,6 +36,8 @@ fi
 
 echo -e $options | while read OPTION
 do
+	clear
+
 	case $OPTION in
 		1) bash $BASEDIR/components/rails_rvm.sh;;
 
