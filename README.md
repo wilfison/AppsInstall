@@ -8,7 +8,7 @@
 ## Installation:
 
 
-1. Download all files by clicking [here](https://github.com/Wilfison/AppsInstall/archive/master.zip) or run the command below in a terminal:
+1. Run the command below in a terminal:
 
 ```shell
 bash -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/install.sh -O -)"
@@ -22,9 +22,9 @@ bash -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/in
 
 1. After installing, look for `App Install` in your applications menu or run `appinstall` in a terminal
 
-2. Choose from the menu using the option number which apps you want to install by separating them with a comma, eg `2,10,11`
+2. Choose from the menu pressing `space` in keyboard or mouse click and press `enter` to confirm.
 
-3. Wait for the success message to install another app or use option `0` to exit the app.
+3. Wait for the success message to install another app or press `cancel` to exit the app.
 
 ##  Attention
 
