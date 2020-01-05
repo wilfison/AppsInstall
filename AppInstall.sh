@@ -1,7 +1,6 @@
 #!/bin/bash
 
-BASEDIR="$PWD/components"
-# BASEDIR="$HOME/.local/share/AppInstall/components"
+BASEDIR="$HOME/.local/share/AppInstall/components"
 source $BASEDIR/helpers/colors.sh
 source $BASEDIR/helpers/profile.sh
 
