@@ -16,7 +16,7 @@ sudo tar Jxf telegram.tar.xz -C /opt/ &&
 sudo mv /opt/Telegram* /opt/telegram &&
 sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram &&
 sudo chmod -R 777 /opt/telegram &&
-echo '[Desktop Entry]\n Version=1.0\n Name=Telegram Desktop\n Comment=Official desktop application for the Telegram messaging service\n TryExec=/home/william/telegram/Telegram\n Exec=/opt/telegram/Telegram -- %u\n Icon=telegram\n Terminal=false\n StartupWMClass=TelegramDesktop\n Type=Application\n Categories=Network;InstantMessaging;Qt;\n MimeType=x-scheme-handler/tg;\n Keywords=tg;chat;im;messaging;messenger;sms;tdesktop;\n X-GNOME-UsesNotifications=true' | sudo tee /usr/share/applications/telegramdesktop.desktop &&
+echo '[Desktop Entry] \nVersion=1.0 \nName=Telegram Desktop \nComment=Official desktop application for the Telegram messaging service \nTryExec=$HOME/telegram/Telegram \nExec=/opt/telegram/Telegram -- %u \nIcon=telegram \nTerminal=false \nStartupWMClass=TelegramDesktop \nType=Application \nCategories=Network;InstantMessaging;Qt; \nMimeType=x-scheme-handler/tg; \nKeywords=tg;chat;im;messaging;messenger;sms;tdesktop; \nX-GNOME-UsesNotifications=true' | sudo tee /usr/share/applications/telegramdesktop.desktop &&
 rm -f telegram.tar.xz &&
 
 echo -e "$green Telegram successfully installed $close_color"

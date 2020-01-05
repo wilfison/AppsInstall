@@ -1,25 +1,50 @@
 {
-    "window.zoomLevel": -1,
-    "editor.minimap.enabled": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.tabSize": 2,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "prettier.jsxSingleQuote": true,
-    "prettier.singleQuote": true,
-    "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 15,
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "editor.fontLigatures": true,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.codeLens.enabled": false,
-    "workbench.colorTheme": "One Dark Pro Vivid",
-    "editor.formatOnSave": false,
-    "breadcrumbs.enabled": false,
-    "editor.renderWhitespace": "none",
-    "workbench.startupEditor": "newUntitledFile",
-    "gitlens.views.repositories.files.layout": "list"
+  "editor.minimap.enabled": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.fontFamily": "Cascadia Code",
+  "editor.fontSize": 13,
+  "editor.renderWhitespace": "none",
+  "editor.fontLigatures": true,
+  "editor.formatOnSaveTimeout": 1500,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "One Dark Dracula",
+  "workbench.startupEditor": "newUntitledFile",
+  "oneDarkPro.editorTheme": "ayu",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "breadcrumbs.enabled": false,
+  "gitlens.views.repositories.files.layout": "list",
+  "solargraph.useBundler": true,
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "ruby.format": "rubocop",
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true
+    },
+    "reek": {
+      "useBundler": true
+    }
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "castwide.solargraph"
+  },
+  "[js]": {
+    "editor.defaultFormatter": "eslint"
+  },
+  "eslint.run": "onSave",
+  "eslint.autoFixOnSave": true
 }
