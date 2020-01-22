@@ -3,16 +3,21 @@
 source $HOME/.local/share/AppInstall/components/helpers/colors.sh
 BASEDIR=$HOME/.local/share/AppInstall/components
 
-echo -e "$green Installing Access Key! $close_color" &&
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg &&
-sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg &&
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' &&
+# check if prev instaled
+if which -a "code";then
+  echo -e "$green VS Code já instalado! $close_color"
+else
+  echo -e "$green Installing Access Key! $close_color" &&
+  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg &&
+  sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg &&
+  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' &&
 
-echo -e "$green Updating... $close_color" &&
-sudo apt update &&
+  echo -e "$green Updating... $close_color" &&
+  sudo apt update &&
 
-echo -e "$green Installing VS Code $close_color" &&
-sudo apt install code -y &&
+  echo -e "$green Installing VS Code $close_color" &&
+  sudo apt install code -y
+fi
 
 add_extensions=$(dialog --title "Extensions" --yesno "Do you want to install Custom Extensions?" 8 60 2>&1 >/dev/tty)
 
