@@ -76,6 +76,4 @@ while true; do
 			*) dialog --title '✗ ERROR:' --msgbox 'Please enter a valid option!' 6 40;;
 		esac
 	done
-
-	dialog --title 'Success:' --msgbox 'All items successfully instaled!' 6 40
 done
