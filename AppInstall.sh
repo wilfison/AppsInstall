@@ -38,7 +38,7 @@ while true; do
 
 	echo -e $options | while read OPTION
 	do
-		clear
+		# clear
 
 		case $OPTION in
 			1) bash $BASEDIR/rails_rvm.sh;;
