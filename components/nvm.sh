@@ -1,10 +1,10 @@
 #!/bin/bash
 
 source $HOME/.local/share/AppInstall/components/helpers/colors.sh
-source $HOME/.local/share/AppInstall/helpers/profile.sh
+source $HOME/.local/share/AppInstall/components/helpers/profile.sh
 
 echo -e "$green Installing required components! $close_color" &&
-sudo apt install build-essential checkinstall libssl-dev &&
+sudo apt install build-essential checkinstall libssl-dev -y &&
 
 echo -e "$green Downloading installer $close_color" &&
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash &&

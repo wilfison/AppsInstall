@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source $HOME/.local/share/AppInstall/components/helpers/colors.sh
-source $HOME/.local/share/AppInstall/helpers/profile.sh
+source $HOME/.local/share/AppInstall/components/helpers/profile.sh
 
 nodeversion=$( dialog --stdout --title 'Version to Install' --menu 'Version stable to Install' 0 40 3 \
   10 "10.x" \
