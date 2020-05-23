@@ -76,8 +76,17 @@ if [ $? = 0 ]; then
   echo -e "$green Rails - 10K+ snippets $close_color"
   code --install-extension hridoy.rails-snippets
 
+  echo -e "$green Ruby Solargraph $close_color"
+  code --install-extension castwide.solargraph
+
+  echo -e "$green Smart Column Indenter $close_color"
+  code --install-extension lmcarreiro.vscode-smart-column-indenter
+
   echo -e "$green Sass syntax Highlighting $close_color"
   code --install-extension syler.sass-indented
+
+  echo -e "$green Auto Add Brackets in String Interpolation $close_color"
+  code --install-extension aliariff.auto-add-brackets
 
   echo -e "$green Updating VS Code Settings... $close_color"
   rm $HOME/.config/Code/User/settings.json
