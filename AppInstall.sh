@@ -6,74 +6,72 @@ source $BASEDIR/helpers/profile.sh
 
 # set personal configs
 if [ "$1" == '-d' ]; then
-  bash $BASEDIR/personal_config.sh
+	bash $BASEDIR/personal_config.sh
 fi
 
 while true; do
-	options=$(dialog --stdout --separate-output --no-shadow --checklist 'What are we going to install now?' 23 100 100  \
-		1  "RVM + Rails + PostgreSql" 				off \
-		2  "New Rails Project with Template"  off \
-		3  "Visual Code"  		 								off \
-		4  "React Native CLI"  								off \
-		5  "Git"   						 								off \
-		6  "Electron"          								off \
-		7  "NVM"     													off \
-		8  "Ionic"   													off \
-		9  "Nodejs"  													off \
-		10 "My ZSH "  												off \
-		11 "Docker"   												off \
-		50 "Google Chrome"										off \
-		51 "Telegram"													off \
-		52 "Codecs and Extras"								off \
-		53 "Set VSCode configs"         			off \
-		54 "Update AppInstall"								off
+	options=$(
+		dialog --stdout --separate-output --no-shadow --checklist 'What are we going to install now?' 23 100 100 \
+			1 "RVM + Rails + PostgreSql" off \
+			2 "New Rails Project with Template" off \
+			3 "Visual Code" off \
+			4 "React Native CLI" off \
+			5 "Git" off \
+			6 "Electron" off \
+			7 "NVM" off \
+			8 "Ionic" off \
+			9 "Nodejs" off \
+			10 "My ZSH " off \
+			11 "Docker" off \
+			50 "Google Chrome" off \
+			51 "Telegram" off \
+			52 "Codecs and Extras" off \
+			53 "Set VSCode configs" off \
+			54 "Update AppInstall" off
 	)
 
 	# check if an option has been entered
 	if [ $? -eq 1 ]; then
 		clear &&
-		echo -e "$green \n \n BYE :) \n \n $close_color" &&
-		exit 1;
+			echo -e "$green \n \n BYE :) \n \n $close_color" &&
+			exit 1
 	fi
 
-	echo -e $options | while read OPTION
-	do
-		# clear
-
+	echo -e $options | while read OPTION; do
 		case $OPTION in
-			1) bash $BASEDIR/rails_rvm.sh;;
+		1) bash $BASEDIR/rails_rvm.sh && echo 'OK';;
 
-			2) bash $BASEDIR/rails_template.sh;;
+		2) bash $BASEDIR/rails_template.sh && echo 'OK';;
 
-			3) bash $BASEDIR/vscode.sh;;
+		3) bash $BASEDIR/vscode.sh && echo 'OK';;
 
-			4) bash $BASEDIR/react_native.sh;;
+		4) bash $BASEDIR/react_native.sh && echo 'OK';;
 
-			5) bash $BASEDIR/git.sh;;
+		5) bash $BASEDIR/git.sh && echo 'OK';;
 
-			6) bash $BASEDIR/electron.sh;;
+		6) bash $BASEDIR/electron.sh && echo 'OK';;
 
-			7) bash $BASEDIR/nvm.sh;;
+		7) bash $BASEDIR/nvm.sh && echo 'OK';;
 
-			8) bash $BASEDIR/ionic.sh;;
+		8) bash $BASEDIR/ionic.sh && echo 'OK';;
 
-			9) bash $BASEDIR/node.sh;;
+		9) bash $BASEDIR/node.sh && echo 'OK';;
 
-			10) bash $BASEDIR/zsh.sh;;
+		10) bash $BASEDIR/zsh.sh && echo 'OK';;
 
-			11) bash $BASEDIR/docker.sh;;
+		11) bash $BASEDIR/docker.sh && echo 'OK';;
 
-			50) bash $BASEDIR/chrome.sh;;
+		50) bash $BASEDIR/chrome.sh && echo 'OK';;
 
-			51) bash $BASEDIR/telegram.sh;;
+		51) bash $BASEDIR/telegram.sh && echo 'OK';;
 
-			52) bash $BASEDIR/extras.sh;;
-			
-			53) bash $BASEDIR/vscode_config_project.sh;;
-			
-			54) bash $BASEDIR/update.sh;;
+		52) bash $BASEDIR/extras.sh && echo 'OK';;
 
-			*) dialog --title '✗ ERROR:' --msgbox 'Please enter a valid option!' 6 40;;
+		53) bash $BASEDIR/vscode_config_project.sh && echo 'OK';;
+
+		54) bash $BASEDIR/update.sh && echo 'OK';;
+
+		*) echo -e "$red ✗ ERROR: '$OPTION' is not a valid option!" ;;
 		esac
 	done
 done

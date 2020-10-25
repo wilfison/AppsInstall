@@ -19,3 +19,13 @@ command -v nvm &&
 
 echo -e "$green NVM successfully installed on version: $close_color" &&
 nvm --version
+
+echo -e "$green You need to reboot the system to complete instalation! $close_color"
+
+echo -ne "$blue Do you want to reboot now? [y:n] $close_color"
+read reboot_now
+
+# if user press Yes
+if [ "$reboot_now" = 'y' ]; then
+  systemctl reboot
+fi

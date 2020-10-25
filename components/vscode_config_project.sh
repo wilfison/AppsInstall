@@ -11,6 +11,6 @@ if [ $? = 1 ]; then
 fi
 
 mkdir -p .vscode &&
-cp -i $BASEDIR/config/settings.json $PWD/.vscode &&
+cp -i $BASEDIR/config/vscode_settings.json $PWD/.vscode &&
 
 dialog --title 'VS Code COnfig Projec' --msgbox 'VSCODE successfully configured!' 7 40
