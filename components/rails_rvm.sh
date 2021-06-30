@@ -9,7 +9,8 @@ rvm_installation=$(which rvm)
 
 if [ "$rvm_installation" = 'rvm not found' ]; then
   echo -e "$green Installing required components! $close_color"
-  sudo apt install -y build-essential curl gnupg2 autoconf bison libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev libpq-dev ruby-dev sudo apt-get install software-properties-common &&
+  sudo apt install -y build-essential curl gnupg2 autoconf bison libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev libpq-dev ruby-dev
+  sudo apt-get install software-properties-common &&
 
   echo -e "$green Installing RVM $close_color"
   gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB &&
