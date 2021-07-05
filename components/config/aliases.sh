@@ -16,7 +16,7 @@ net_checker() {
     # attempts
     times=`expr $times + 1`
 
-    # wait 1 second
+    # wait 5 seconds
     sleep 1
 
     # try again
@@ -54,5 +54,5 @@ alias rdb_teste="rails db:drop db:create db:migrate RAILS_ENV=test"
 # Check if you have internet connection and show notification if any
 alias has_net=net_checker
 
-# Shows what is the ip of your machine on the network (Wifi only)
-alias mip="ifconfig wlp2s0 | grep 'inet ' | grep -oE '([0-9]{1,3}[\.]){3}[0-9]{1,3}' | head -n 1"
+alias mip="hostname -I"
+alias mipub="curl ifconfig.me/ip"
