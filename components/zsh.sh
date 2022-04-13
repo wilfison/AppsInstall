@@ -7,9 +7,14 @@ echo -e "$green Installing... $close_color" &&
 sudo apt install zsh git -y &&
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" &&
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" &&
 
 echo -e "$green Setting as Default SHELL! $close_color" &&
 chsh -s /bin/zsh &&
+
+echo "zinit light zdharma/fast-syntax-highlighting" >> ~/.zshrc
+echo "zinit light zsh-users/zsh-autosuggestions" >> ~/.zshrc
+echo "zinit light zsh-users/zsh-completions" >> ~/.zshrc
 
 echo -ne "$blue Do you want to install Aliases? [y:n] $close_color"
 read add_aliases
