@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source $HOME/.local/share/AppInstall/components/helpers/colors.sh
-BASEDIR=$HOME/.local/share/AppInstall/components
+source $APPINST_BASEDIR/components/helpers/colors.sh
+BASEDIR=$("$APPINST_BASEDIR/components")
 
 # check if prev instaled
 if which -a "code"; then

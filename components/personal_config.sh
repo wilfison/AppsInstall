@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASEDIR="$HOME/.local/share/AppInstall/components"
+BASEDIR=$APPINST_BASEDIR/components
 
 source $BASEDIR/helpers/profile.sh
 source $BASEDIR/helpers/colors.sh

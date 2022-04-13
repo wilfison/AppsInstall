@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source $HOME/.local/share/AppInstall/components/helpers/colors.sh
+source $APPINST_BASEDIR/components/helpers/colors.sh
 
 echo -e "$green Removing old version $close_color"
-sudo apt remove -y docker docker-engine docker.io containerd runc &&
+sudo apt remove -y docker docker-engine docker.io containerd runc
 
 echo -e "$green Setting up environment! $close_color"
 sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common &&

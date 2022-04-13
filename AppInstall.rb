@@ -4,32 +4,43 @@
 
 require 'tty-prompt'
 
-prompt = TTY::Prompt.new
+def run_scripts(script_names)
+  cmd = ''
 
-selecteds = prompt.multi_select('What are we going to install now?') do |menu|
-  menu.choice 'Chrome',                                     :chrome
-  menu.choice 'Docker',                                     :docker
-  menu.choice 'Extras (codecs, decompressors, etc)',        :extras
-  menu.choice 'Git',                                        :git
-  menu.choice 'Node',                                       :node
-  menu.choice 'NVM (Node Version Manager)',                 :nvm
-  menu.choice 'Add Custom Aliases',                         :personal_config
-  menu.choice 'RVM + Ruby on Rails',                        :rails_rvm
-  menu.choice 'Rails Template (Rails project Boilerplate)', :rails_template
-  menu.choice 'React Native',                               :react_native
-  menu.choice 'Telegram Desktop',                           :telegram
-  menu.choice 'Vscode',                                     :vscode
-  menu.choice 'Zsh',                                        :zsh
-  menu.choice 'Add Vscode default settings to a project',   :vscode_config_project
-  menu.choice 'Update AppInstall',                          :update
+  script_names.each do |script_name|
+    cmd += "&& bash components/#{script_name}.sh"
+  end
+
+  system "cd #{Dir.pwd} #{cmd}"
 end
 
-raise StandardError, 'Error! Select at least one option' if selecteds.size.zero?
+def execute
+  prompt = TTY::Prompt.new
 
-cmd = ''
+  selecteds = prompt.multi_select('What are we going to install now?') do |menu|
+    menu.choice 'Chrome',                                     :chrome
+    menu.choice 'Docker',                                     :docker
+    menu.choice 'Extras (codecs, decompressors, etc)',        :extras
+    menu.choice 'Git',                                        :git
+    menu.choice 'Node',                                       :node
+    menu.choice 'NVM (Node Version Manager)',                 :nvm
+    menu.choice 'Add Custom Aliases',                         :personal_config
+    menu.choice 'RVM + Ruby on Rails',                        :rails_rvm
+    menu.choice 'React Native',                               :react_native
+    menu.choice 'Vscode',                                     :vscode
+    menu.choice 'Zsh',                                        :zsh
+    menu.choice 'FFMPEG (Latest)',                            :ffmpeg
+    menu.choice 'Update AppInstall',                          :update
+  end
 
-selecteds.each do |selected|
-  cmd += " && bash components/#{selected}.sh"
+  raise StandardError, 'Error! Select at least one option' if selecteds.size.zero?
+
+  run_scripts(selecteds)
+rescue TTY::Reader::InputInterrupt, Interrupt
+  puts ''
+  puts '-----> The action has been canceled'
+rescue StandardError => e
+  puts e
 end
 
-system "cd #{Dir.pwd} #{cmd}"
+execute

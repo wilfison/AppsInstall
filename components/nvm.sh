@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source $HOME/.local/share/AppInstall/components/helpers/colors.sh
-source $HOME/.local/share/AppInstall/components/helpers/profile.sh
+source $APPINST_BASEDIR/components/helpers/colors.sh
+source $APPINST_BASEDIR/components/helpers/profile.sh
 
 echo -e "$green Installing required components! $close_color" &&
 sudo apt install build-essential checkinstall libssl-dev -y &&

@@ -1,15 +1,13 @@
 #!/bin/bash
 
-source $HOME/.local/share/AppInstall/components/helpers/colors.sh
-source $HOME/.local/share/AppInstall/components/helpers/profile.sh
+source $APPINST_BASEDIR/components/helpers/colors.sh
+source $APPINST_BASEDIR/components/helpers/profile.sh
 
-nodeversion=$( dialog --stdout --title 'Version to Install' --menu 'Version stable to Install' 0 40 3 \
-  10 "10.x" \
-  11 "11.x" \
-  12 "12.x"
-)
 
-if [ $? = 1 ]; then
+echo -ne "$blue Version stable to Install: (14, 15, 16, 17...) $close_color" &&
+read nodeversion
+
+if [ -z "$nodeversion" ]; then
   clear && exit 1;
 fi
 

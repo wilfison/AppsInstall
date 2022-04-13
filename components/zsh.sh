@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASEDIR=$HOME/.local/share/AppInstall/components
+BASEDIR=$("$APPINST_BASEDIR/components")
 source $BASEDIR/helpers/colors.sh
 
 echo -e "$green Installing... $close_color" &&
@@ -10,7 +10,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" &&
 
 echo -e "$green Setting as Default SHELL! $close_color" &&
-chsh -s /bin/zsh &&
+sudo chsh -s /bin/zsh &&
 
 echo "zinit light zdharma/fast-syntax-highlighting" >> ~/.zshrc
 echo "zinit light zsh-users/zsh-autosuggestions" >> ~/.zshrc

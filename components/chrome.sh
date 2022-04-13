@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $HOME/.local/share/AppInstall/components/helpers/colors.sh
+source $APPINST_BASEDIR/components/helpers/colors.sh
 
 echo -e "$green Downloading installer... $close_color" &&
 cd ~/ &&

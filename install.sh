@@ -5,7 +5,7 @@ blue="\033[0;34m"
 close_color="\033[0m"
 
 echo -e "$green Installing essential tools.. $close_color" &&
-sudo apt install git dialog -y &&
+sudo apt install git -y &&
 
 echo -e "$green Downloading installer... $close_color" &&
 cd ~/.local/share/ &&
@@ -15,7 +15,10 @@ rm -f ./applications/AppInstall.desktop
 git clone https://github.com/Wilfison/AppsInstall AppInstall &&
 
 sudo cp ./AppInstall/AppInstall.desktop /usr/share/applications &&
-sudo ln -sf $HOME/.local/share/AppInstall/AppInstall.sh /usr/bin/appinstall &&
+cd AppInstall &&
+bundle config set --local without test development &&
+bundle install &&
+sudo ln -sf ./run.sh /usr/bin/appinstall &&
 
 clear
 
