@@ -1,6 +1,3 @@
 rails_app
 *.log
 .vscode
-.bundle
-
-Gemfile.lock
