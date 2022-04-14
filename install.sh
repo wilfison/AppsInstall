@@ -8,17 +8,15 @@ echo -e "$green Installing essential tools.. $close_color" &&
 sudo apt install git -y &&
 
 echo -e "$green Downloading installer... $close_color" &&
-cd ~/.local/share/ &&
+mkdir -p $HOME/Apps
+cd $HOME/Apps &&
 rm -rf -f ./AppInstall
-rm -f ./applications/AppInstall.desktop
+sudo rm -f $HOME/.local/share/applications/AppInstall.desktop
 
-git clone https://github.com/Wilfison/AppsInstall AppInstall &&
+git clone https://github.com/Wilfison/AppsInstall AppInstall
 
 sudo cp ./AppInstall/AppInstall.desktop /usr/share/applications &&
-cd AppInstall &&
-bundle config set --local without test development &&
-bundle install &&
-sudo ln -sf ./run.sh /usr/bin/appinstall &&
+sudo ln -sf $HOME/Apps/AppInstall/AppInstall.sh /usr/bin/devinstall &&
 
 clear
 

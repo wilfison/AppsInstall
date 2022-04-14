@@ -2,7 +2,7 @@
 Version=1.3
 Name=App Install
 Comment=Instala vários programas e prepara ambientes para programação sem que você digite códigos
-Exec=sh -c "~/.local/share/AppInstall/AppInstall.sh"
+Exec=sh -c "~/Apps/AppInstall/AppInstall.sh"
 Icon=cs-startup-programs
 Terminal=true
 Type=Application
