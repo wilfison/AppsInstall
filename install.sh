@@ -21,4 +21,4 @@ sudo ln -sf $HOME/Apps/AppInstall/AppInstall.sh /usr/bin/devinstall &&
 clear
 
 echo -e "$green App Install successfully installed 🎉🎉🎉 $close_color"
-echo -e "Now look for App Install in your applications menu or run$blue appinstall$close_color on your terminal"
+echo -e "Now look for App Install in your applications menu or run$blue devinstall$close_color on your terminal"
