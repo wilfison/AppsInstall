@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $HOME/.local/share/AppInstall/components/helpers/colors.sh &&
+source $APPINST_BASEDIR/components/helpers/colors.sh &&
 
 echo -e "$green Installing required components! $close_color" &&
 sudo apt install build-essential -y &&

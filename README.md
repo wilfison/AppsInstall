@@ -20,7 +20,7 @@ bash -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/in
 
 ## How to use
 
-1. After installing, look for `App Install` in your applications menu or run `appinstall` in a terminal
+1. After installing, look for `App Install` in your applications menu or run `devinstall` in a terminal
 
 2. Choose from the menu pressing `space` in keyboard or mouse click and press `enter` to confirm.
 
