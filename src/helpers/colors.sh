@@ -17,5 +17,9 @@ show_warning_log(){
   echo -e "\n$yellow-----> $1 $close_color"
 }
 show_error_log(){
-  echo -e "\n$red-----> $1 $close_color"
+  echo -e "\n$red ERROR: $1 $close_color"
+}
+
+show_info_input(){
+  echo -ne "\n$blue-----> $1 $close_color"
 }

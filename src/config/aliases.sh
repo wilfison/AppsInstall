@@ -1,7 +1,3 @@
-
-# default code editor
-export EDITOR="code --wait"
-
 net_checker() {
   # check connection on first time
   test=$(curl -Is  http://www.google.com | grep -oE 'OK' | head -n 1)
@@ -31,6 +27,9 @@ net_checker() {
   notify-send 'Internet Checker' 'Internet Connection is OK' -i network-wired -u critical
 }
 
+# Set Vs Code as default code editor
+export EDITOR="code --wait"
+
 # ==================== GIT ==============================
 # shortcode for git status
 alias gst="git status"
@@ -54,5 +53,5 @@ alias rdb_teste="rails db:drop db:create db:migrate RAILS_ENV=test"
 # Check if you have internet connection and show notification if any
 alias has_net=net_checker
 
-alias mip="hostname -I"
-alias mipub="curl ifconfig.me/ip"
+alias ip_addr="sudo ip -br -c addr show"
+alias ip_public="curl --silent ifconfig.me/ip"

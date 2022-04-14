@@ -2,11 +2,12 @@
 
 APPINST_SCRIPT="$(realpath "$0")"
 export APPINST_BASEDIR="$(dirname "$APPINST_SCRIPT")"
+export APPINST_APPS_PATH="$(realpath "$HOME/Apps")"
 
 # cd $APPINST_BASEDIR && ruby AppInstall.rb
 cd $APPINST_BASEDIR
 
-BASEDIR="$APPINST_BASEDIR/components"
+BASEDIR="$APPINST_BASEDIR/src"
 source $BASEDIR/helpers/colors.sh
 source $BASEDIR/helpers/profile.sh
 source $BASEDIR/helpers/multiselect.sh
@@ -27,6 +28,7 @@ APPINST_APPS_LIST=(
   'Zsh                                  ;      zsh'
   'Update AppInstall                    ;      update'
 )
+
 multiselect APPINST_APPS_SELECTED APPINST_APPS_LIST
 
 # check if an option has been entered
@@ -39,6 +41,6 @@ for APPINST_APP in "${APPINST_APPS_SELECTED[@]}"; do
 	if [ -f "$BASEDIR/$APPINST_APP.sh" ]; then
 		bash $BASEDIR/$APPINST_APP.sh
 	else
-		show_error_log "✗ ERROR: '$APPINST_APP' is not a valid option!"
+		show_error_log "'$APPINST_APP' is not a valid option!"
 	fi
 done

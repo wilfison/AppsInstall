@@ -1,4 +1,4 @@
-source $APPINST_BASEDIR/components/colors.sh
+source $APPINST_BASEDIR/src/colors.sh
 
 function multiselect {
   # little helpers for terminal print control and key input

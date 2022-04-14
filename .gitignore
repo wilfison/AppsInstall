@@ -1,3 +1,4 @@
 rails_app
+tmp
 *.log
 .vscode

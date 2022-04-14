@@ -1,11 +1,11 @@
 #!/bin/bash
 
-source $APPINST_BASEDIR/components/helpers/colors.sh &&
-source $APPINST_BASEDIR/components/helpers/profile.sh &&
+source $APPINST_BASEDIR/src/helpers/colors.sh &&
+source $APPINST_BASEDIR/src/helpers/profile.sh &&
 
 show_info_log "Removing old packages!" &&
 
-BUILD_DIR="$HOME/Apps/ffmpeg"
+BUILD_DIR="$APPINST_APPS_PATH/ffmpeg"
 
 ffmpeg_installation=$(which ffmpeg)
 ffmpeg_path=$(dirname $ffmpeg_installation)
