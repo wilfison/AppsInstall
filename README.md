@@ -11,7 +11,7 @@
 1. Run the command below in a terminal:
 
 ```shell
-bash -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/install.sh -O -)"
+curl -s https://raw.githubusercontent.com/Wilfison/AppsInstall/master/install.sh | bash -s
 ```
 
 2. Wait for the installation to finish
@@ -29,5 +29,5 @@ bash -c "$(wget https://raw.githubusercontent.com/Wilfison/AppsInstall/master/in
 ##  Attention
 
 #### Script only tested on distributions:
-- Ubuntu >= 16.04
-- Linux Mint >= 18.1
+- Ubuntu >= 20.04
+- Linux Mint >= 20
