@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASEDIR=$("$APPINST_BASEDIR/components")
+BASEDIR=$("$APPINST_BASEDIR/src")
 source $BASEDIR/helpers/colors.sh
 
 show_info_log "Installing..." &&

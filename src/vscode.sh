@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source $APPINST_BASEDIR/src/helpers/colors.sh
-BASEDIR=$("$APPINST_BASEDIR/components")
+BASEDIR=$("$APPINST_BASEDIR/src")
 
 # check if prev instaled
 if which -a "code"; then
@@ -32,64 +32,64 @@ if [ "$add_extensions" = 'y' ]; then
   git clone https://github.com/Wilfison/one-dark-dracula.git $HOME/.vscode/extensions
 
   show_info_log "One Dark theme for Visual Studio Code"
-  code --install-extension zhuangtongfa.material-theme
+  code --force --install-extension zhuangtongfa.material-theme
 
   show_info_log "HTML/XML close tag"
-  code --install-extension formulahendry.auto-close-tag
+  code --force --install-extension formulahendry.auto-close-tag
 
   show_info_log "VSCode syntax highlighting for JavaScript"
-  code --install-extension mgmcdermott.vscode-language-babel
+  code --force --install-extension mgmcdermott.vscode-language-babel
 
   show_info_log "Haml syntax highlighting"
-  code --install-extension karunamurti.haml
+  code --force --install-extension karunamurti.haml
 
   show_info_log "Highlight web colors"
-  code --install-extension naumovs.color-highlight
+  code --force --install-extension naumovs.color-highlight
 
   show_info_log "Support for dotenv file syntax"
-  code --install-extension mikestead.dotenv
+  code --force --install-extension mikestead.dotenv
 
   show_info_log "EditorConfig Support for Visual Studio Code"
-  code --install-extension editorconfig.editorconfig
+  code --force --install-extension editorconfig.editorconfig
 
   show_info_log "Simple extensions for React, Redux and Graphql"
-  code --install-extension dsznajder.es7-react-js-snippets
+  code --force --install-extension dsznajder.es7-react-js-snippets
 
   show_info_log "Integrates ESLint JavaScript into VS Code."
-  code --install-extension dbaeumer.vscode-eslint
+  code --force --install-extension dbaeumer.vscode-eslint
 
   show_info_log "File Utils"
-  code --install-extension sleistner.vscode-fileutils
+  code --force --install-extension sleistner.vscode-fileutils
 
   show_info_log "GitLens"
-  code --install-extension eamodio.gitlens
+  code --force --install-extension eamodio.gitlens
 
   show_info_log "Code snippets for JavaScript in ES6 syntax"
-  code --install-extension xabikos.javascriptsnippets
+  code --force --install-extension xabikos.javascriptsnippets
 
   show_info_log "Material Design Icons for Visual Studio Code"
-  code --install-extension pkief.material-icon-theme
+  code --force --install-extension pkief.material-icon-theme
 
   show_info_log "A rainbow brackets extension for VS Code."
-  code --install-extension 2gua.rainbow-brackets
+  code --force --install-extension 2gua.rainbow-brackets
 
   show_info_log "Adds support for Ruby colorization to Visual Studio Code"
-  code --install-extension groksrc.ruby
+  code --force --install-extension groksrc.ruby
 
   show_info_log "Rails - 10K+ snippets"
-  code --install-extension hridoy.rails-snippets
+  code --force --install-extension hridoy.rails-snippets
 
   show_info_log "Ruby Solargraph"
-  code --install-extension castwide.solargraph
+  code --force --install-extension castwide.solargraph
 
   show_info_log "Smart Column Indenter"
-  code --install-extension lmcarreiro.vscode-smart-column-indenter
+  code --force --install-extension lmcarreiro.vscode-smart-column-indenter
 
   show_info_log "Sass syntax Highlighting"
-  code --install-extension syler.sass-indented
+  code --force --install-extension syler.sass-indented
 
   show_info_log "Auto Add Brackets in String Interpolation"
-  code --install-extension aliariff.auto-add-brackets
+  code --force --install-extension aliariff.auto-add-brackets
 
   show_info_log "Updating VS Code Settings..."
   rm $HOME/.config/Code/User/settings.json
