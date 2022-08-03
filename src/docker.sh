@@ -18,7 +18,7 @@ echo \
 
 sudo apt update &&
 sudo apt install -y docker-ce docker-ce-cli containerd.io &&
-sudo groupadd docker &&
+sudo groupadd docker
 sudo usermod -aG docker $USER &&
 
 show_success_log "Docker successfully installed"
