@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source $APPINST_BASEDIR/src/helpers/colors.sh
-BASEDIR=$("$APPINST_BASEDIR/src")
+BASEDIR="$APPINST_BASEDIR/src"
 
 # check if prev instaled
 if which -a "code"; then
