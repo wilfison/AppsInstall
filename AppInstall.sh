@@ -16,6 +16,7 @@ clear
 
 APPINST_APPS_LIST=(
   'Chrome                               ;      chrome'
+  'Discord                              ;      discord'
   'Docker                               ;      docker'
   'Extras (codecs, decompressors, etc)  ;      extras'
   'FFMPEG (Latest)                      ;      ffmpeg'
@@ -33,14 +34,14 @@ multiselect APPINST_APPS_SELECTED APPINST_APPS_LIST
 
 # check if an option has been entered
 if [ ${#APPINST_APPS_SELECTED[@]} -eq 0 ]; then
-	show_warning_log "Error! Select at least one option" &&
-	exit 1
+  show_warning_log "Error! Select at least one option" &&
+    exit 1
 fi
 
 for APPINST_APP in "${APPINST_APPS_SELECTED[@]}"; do
-	if [ -f "$BASEDIR/$APPINST_APP.sh" ]; then
-		bash $BASEDIR/$APPINST_APP.sh
-	else
-		show_error_log "'$APPINST_APP' is not a valid option!"
-	fi
+  if [ -f "$BASEDIR/$APPINST_APP.sh" ]; then
+    bash $BASEDIR/$APPINST_APP.sh
+  else
+    show_error_log "'$APPINST_APP' is not a valid option!"
+  fi
 done
