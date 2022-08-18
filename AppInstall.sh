@@ -27,6 +27,7 @@ APPINST_APPS_LIST=(
   'React Native                         ;      react_native'
   'Vscode                               ;      vscode'
   'Zsh                                  ;      zsh'
+  'Noise Suppressor                     ;      noise_suppressor'
   'Update AppInstall                    ;      update'
 )
 
