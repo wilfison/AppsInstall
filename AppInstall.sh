@@ -24,10 +24,11 @@ APPINST_APPS_LIST=(
   'Node                                 ;      node'
   'NVM (Node Version Manager)           ;      nvm'
   'RVM + Ruby on Rails                  ;      rails_rvm'
+  'asdf                                 ;      asdf'
   'React Native                         ;      react_native'
   'Vscode                               ;      vscode'
   'Zsh                                  ;      zsh'
-  'Noise Suppressor                     ;      noise_suppressor'
+  'Microphone Noise Suppressor          ;      noise_suppressor'
   'Update AppInstall                    ;      update'
 )
 
