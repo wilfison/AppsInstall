@@ -1,12 +1,10 @@
 # AppsInstall
-### Shell Script for automating the Web development environment on Ubuntu and Linux Mint
 
+### Shell Script for automating the Web development environment on Ubuntu and Linux Mint
 
 ![ScreenShot](./screenshot.png)
 
-
 ## Installation:
-
 
 1. Run the command below in a terminal:
 
@@ -26,8 +24,26 @@ curl -s https://raw.githubusercontent.com/Wilfison/AppsInstall/master/install.sh
 
 3. Wait for the success message to install another app or press `cancel` to exit the app.
 
-##  Attention
+## Supported Installations
+
+- Zsh
+- Google Chrome
+- Discord
+- Docker
+- FFMPEG (Latest)
+- Git
+- Node
+- NVM (Node Version Manager)
+- RVM + Ruby
+- asdf
+- React Native
+- Vscode
+- Microphone Noise Suppressor (Pulse audio)
+- Extras (codecs, decompressors, etc)
+
+## Attention
 
 #### Script only tested on distributions:
+
 - Ubuntu >= 20.04
 - Linux Mint >= 20
