@@ -15,20 +15,20 @@ source $BASEDIR/helpers/multiselect.sh
 clear
 
 APPINST_APPS_LIST=(
-  'Chrome                               ;      chrome'
-  'Discord                              ;      discord'
-  'Docker                               ;      docker'
-  'Extras (codecs, decompressors, etc)  ;      extras'
-  'FFMPEG (Latest)                      ;      ffmpeg'
   'Git                                  ;      git'
+  'Zsh                                  ;      zsh'
+  'Chrome                               ;      chrome'
+  'Docker                               ;      docker'
+  'FFMPEG (Latest)                      ;      ffmpeg'
   'Node                                 ;      node'
   'NVM (Node Version Manager)           ;      nvm'
   'RVM + Ruby on Rails                  ;      rails_rvm'
   'asdf                                 ;      asdf'
   'React Native                         ;      react_native'
   'Vscode                               ;      vscode'
-  'Zsh                                  ;      zsh'
+  'Discord                              ;      discord'
   'Microphone Noise Suppressor          ;      noise_suppressor'
+  'Extras (codecs, decompressors, etc)  ;      extras'
   'Update AppInstall                    ;      update'
 )
 
