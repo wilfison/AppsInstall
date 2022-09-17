@@ -1,8 +1,8 @@
 net_checker() {
   # check connection on first time
-  test=$(curl -Is  http://www.google.com | grep -oE 'OK' | head -n 1)
+  test=$(curl -Is http://www.google.com | grep -oE 'OK' | head -n 1)
 
-  # 
+  #
   times=1
 
   # if the result is equal to 1, then there was an error
@@ -10,13 +10,13 @@ net_checker() {
     echo -ne "Connection Error! Trying again... ($times) \r"
 
     # attempts
-    times=`expr $times + 1`
+    times=$(expr $times + 1)
 
     # wait 5 seconds
     sleep 1
 
     # try again
-    test=$(curl -Is  http://www.google.com | grep -oE 'OK' | head -n 1)
+    test=$(curl -Is http://www.google.com | grep -oE 'OK' | head -n 1)
   done
 
   echo "=========================="
@@ -30,23 +30,13 @@ net_checker() {
 # Set Vs Code as default code editor
 export EDITOR="code --wait"
 
-# ==================== GIT ==============================
-# shortcode for git status
-alias gst="git status"
-# use: gpu my-branch
-alias gpu="git pull origin"
-# use: gps my-branch
-alias gps="git push origin"
-# run after fixing conflicts
-alias gmg="git add . && git merge --continue"
-# remove all local branches except master
-alias grb='git branch | grep -v "master" | xargs git branch -D'
-
 # =================== Ruby on Rails=======================
+# run rails command inside project
+alias r="bin/rails"
 # database redo
-alias rdb_redo="rails db:drop db:create db:migrate"
+alias rdb_redo="bin/rails db:drop db:create db:migrate"
 # database teste redo
-alias rdb_teste="rails db:drop db:create db:migrate RAILS_ENV=test"
+alias rdb_teste="RAILS_ENV=test bin/rails db:drop db:create db:migrate"
 
 # =================== Others =============================
 
