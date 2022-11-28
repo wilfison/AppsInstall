@@ -5,16 +5,14 @@ BASEDIR="$APPINST_BASEDIR/src"
 
 # check if prev instaled
 if which -a "code"; then
-  show_info_log "VS Code já instalado!"
+  show_info_log "VS Code already installed!"
 else
   show_info_log "Installing Access Key!" &&
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >microsoft.gpg &&
     sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg &&
     sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' &&
-
     show_info_log "Updating..." &&
     sudo apt update &&
-
     show_info_log "Installing VS Code" &&
     sudo apt install code -y
 fi
@@ -42,6 +40,9 @@ if [ "$add_extensions" = 'y' ]; then
 
   show_info_log "Haml syntax highlighting"
   code --force --install-extension karunamurti.haml
+
+  show_info_log "ERB Formatter/Beautify"
+  code --force --install-extension aliariff.vscode-erb-beautify
 
   show_info_log "Highlight web colors"
   code --force --install-extension naumovs.color-highlight
@@ -90,6 +91,9 @@ if [ "$add_extensions" = 'y' ]; then
 
   show_info_log "Auto Add Brackets in String Interpolation"
   code --force --install-extension aliariff.auto-add-brackets
+
+  show_info_log "SQLTools"
+  code --force --install-extension mtxr.sqltools
 
   show_info_log "Updating VS Code Settings..."
   rm $HOME/.config/Code/User/settings.json
