@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 APPINST_SCRIPT="$(realpath "$0")"
 export APPINST_BASEDIR="$(dirname "$APPINST_SCRIPT")"
 export APPINST_APPS_PATH="$(realpath "$HOME/Apps")"
@@ -19,8 +21,6 @@ APPINST_APPS_LIST=(
   'Docker                               ;      docker'
   'FFMPEG (Latest)                      ;      ffmpeg'
   'Node                                 ;      node'
-  'NVM (Node Version Manager)           ;      nvm'
-  'RVM + Ruby on Rails                  ;      rails_rvm'
   'asdf                                 ;      asdf'
   'React Native                         ;      react_native'
   'Vscode                               ;      vscode'
