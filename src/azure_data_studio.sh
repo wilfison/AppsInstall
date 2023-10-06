@@ -6,14 +6,21 @@ BASEDIR="$APPINST_BASEDIR/src"
 # check if prev instaled
 if which -a "azuredatastudio"; then
   show_info_log "Azure Data Studio already installed!"
-else
-  show_info_log "Downloading Azure Data Studio"
-  wget https://go.microsoft.com/fwlink/?linkid=2215528 -O /tmp/azuredatastudio.deb
 
-  show_info_log "Installing Azure Data Studio"
-  sudo apt install /tmp/azuredatastudio.deb
-  rm /tmp/azuredatastudio.deb
+  show_info_input "Would you like to update? [y:n]"
+  read update_app
+
+  if [ "$update_app" != 'y' ]; then
+    exit 0
+  fi
 fi
+
+show_info_log "Downloading Azure Data Studio"
+wget https://azuredatastudio-update.azurewebsites.net/latest/linux-deb-x64/stable -O /tmp/azuredatastudio.deb
+
+show_info_log "Installing Azure Data Studio"
+sudo apt install /tmp/azuredatastudio.deb
+rm /tmp/azuredatastudio.deb
 
 show_info_input "Do you want to install Custom Extensions? [y:n]"
 read add_extensions
