@@ -49,7 +49,7 @@ if grep -R "/Apps/ffmpeg" $MY_PROFILE; then
   true
 else
   show_info_log "Add $BUILD_DIR to sys path"
-  echo 'export PATH="$PATH:${HOME}/Apps/ffmpeg"' >> $MY_PROFILE
+  echo 'export PATH="$PATH:'${BUILD_DIR}'"' >> $MY_PROFILE
 fi
 
 show_success_log "Installation successful"
