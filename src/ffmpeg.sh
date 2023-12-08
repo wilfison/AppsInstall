@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source $APPINST_BASEDIR/src/helpers/colors.sh &&
-source $APPINST_BASEDIR/src/helpers/profile.sh &&
+source $APPINST_BASEDIR/src/helpers/colors.sh
+source $APPINST_BASEDIR/src/helpers/profile.sh
 
-show_info_log "Removing old packages!" &&
+show_info_log "Removing old packages!"
 
 BUILD_DIR="$APPINST_APPS_PATH/ffmpeg"
 
@@ -49,7 +49,7 @@ if grep -R "/Apps/ffmpeg" $MY_PROFILE; then
   true
 else
   show_info_log "Add $BUILD_DIR to sys path"
-  echo 'export PATH="$PATH:'${BUILD_DIR}'"' >> $MY_PROFILE
+  echo 'export PATH="$PATH:'${BUILD_DIR}'"' >>$MY_PROFILE
 fi
 
 show_success_log "Installation successful"
