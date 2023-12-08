@@ -1,32 +1,24 @@
 #!/bin/bash
 
+set -e
+
 BASEDIR="$APPINST_BASEDIR/src"
 source $BASEDIR/helpers/colors.sh
 
-show_info_log "Installing..." &&
-sudo apt install zsh git -y &&
+export $RUNZSH=no
+export $ZSH_CUSTOM=~/.oh-my-zsh/custom
 
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" &&
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" &&
+show_info_log "Installing dependencies..."
+sudo apt install -y zsh git curl
 
-show_info_log "Setting as Default SHELL!" &&
-sudo chsh -s /bin/zsh &&
+show_info_log "Installing Oh My ZSH..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "zinit light zdharma/fast-syntax-highlighting" >> ~/.zshrc
-echo "zinit light zsh-users/zsh-autosuggestions" >> ~/.zshrc
-echo "zinit light zsh-users/zsh-completions" >> ~/.zshrc
+show_info_log "Installing Autosuggestions..."
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-show_info_input "Do you want to install Aliases? [y:n]"
-read add_aliases
-
-# if user press Yes
-if [ "$add_aliases" = 'y' ]; then
-  show_info_log "Config Aliases..."
-  mv $BASEDIR/config/aliases.sh ~/.aliases.sh &&
-  
-  echo -e "\nsource ~/.aliases.sh" >> ~/.zshrc &&
-  show_info_log "Aliases successfully installed in ~/.aliases.sh"
-fi
+# update plugins list on .zshrc
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/g' ~/.zshrc
 
 show_info_log "ZSH successfully installed"
 show_info_log "You need to reboot the system to complete instalation!"
