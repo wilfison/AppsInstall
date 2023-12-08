@@ -22,6 +22,7 @@ APPINST_APPS_LIST=(
   'FFMPEG (Latest)                      ;      ffmpeg'
   'asdf                                 ;      asdf'
   'Vscode                               ;      vscode'
+  'AWS CLI                              ;      aws'
   'Azure Data Studio                    ;      azure_data_studio'
   'Discord                              ;      discord'
   'Update AppInstall                    ;      update'
