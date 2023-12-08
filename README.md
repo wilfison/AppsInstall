@@ -4,6 +4,10 @@
 
 ![ScreenShot](./screenshot.png)
 
+## Attention
+
+This script is for debian/ubuntu based distributions, it was tested on Ubuntu 22.04 and Linux Mint 21.+, but it should work on other debian based distributions.
+
 ## Installation
 
 1 - Run the command below in a terminal:
