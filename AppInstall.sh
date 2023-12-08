@@ -19,12 +19,12 @@ APPINST_APPS_LIST=(
   'Zsh                                  ;      zsh'
   'Chrome                               ;      chrome'
   'Docker                               ;      docker'
-  'FFMPEG (Latest)                      ;      ffmpeg'
   'asdf                                 ;      asdf'
   'Vscode                               ;      vscode'
   'AWS CLI                              ;      aws'
+  'FreeTDS                              ;      free_tds'
   'Azure Data Studio                    ;      azure_data_studio'
-  'Discord                              ;      discord'
+  'FFMPEG (Latest)                      ;      ffmpeg'
   'Update AppInstall                    ;      update'
 )
 
