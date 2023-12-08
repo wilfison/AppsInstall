@@ -4,12 +4,12 @@ set -e
 
 green="\033[0;32m"
 blue="\033[0;34m"
-close_color="\033[0m"
+cc="\033[0m"
 
-echo -e "$green Installing essential tools.. $close_color"
+echo -e "$green Installing essential tools.. $cc"
 sudo apt install -y git
 
-echo -e "$green Downloading installer... $close_color"
+echo -e "$green Downloading installer... $cc"
 mkdir -p $HOME/Apps
 
 APP_PATH="$HOME/Apps/AppInstall"
@@ -24,18 +24,5 @@ fi
 
 sudo ln -sf $APP_PATH/AppInstall.sh /usr/bin/devinstall
 
-echo "[Desktop Entry]
-Version=1.3
-Name=App Install
-Comment=Installs various programs and prepares environments for programming without you typing codes.
-Exec=/usr/bin/devinstall
-Icon=$APP_PATH/AppInstall.svg
-Terminal=true
-Type=Application
-Categories=Development
-" >$HOME/.local/share/applications/AppInstall.desktop
-
-clear
-
-echo -e "$green App Install successfully installed 🎉🎉🎉 $close_color"
-echo -e "Now look for App Install in your applications menu or run$blue devinstall$close_color on your terminal"
+echo -e "$green App Install successfully installed 🎉🎉🎉 $cc"
+echo -e "Now, try running$blue devinstall$cc in your terminal"
