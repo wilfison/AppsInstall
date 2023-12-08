@@ -20,14 +20,10 @@ APPINST_APPS_LIST=(
   'Chrome                               ;      chrome'
   'Docker                               ;      docker'
   'FFMPEG (Latest)                      ;      ffmpeg'
-  'Node                                 ;      node'
   'asdf                                 ;      asdf'
-  'React Native                         ;      react_native'
   'Vscode                               ;      vscode'
   'Azure Data Studio                    ;      azure_data_studio'
   'Discord                              ;      discord'
-  'Microphone Noise Suppressor          ;      noise_suppressor'
-  'Extras (codecs, decompressors, etc)  ;      extras'
   'Update AppInstall                    ;      update'
 )
 
